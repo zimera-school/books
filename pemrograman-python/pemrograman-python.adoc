@@ -1,0 +1,51 @@
+= Pemrograman Python
+Dr. Bambang Purnomosidi D. P. <bambangpdp@gmail.com>
+v0.0.1-rev-{localdatetime}
+:description: Buku ini membahas tentang dasar-dasar pemrograman menggunakan Python \
+untuk digunakan para pembelajar di Zimera School tetapi bebas dipakai di mana saja.
+:doctype: book
+:toc:
+:toc-title: Daftar Isi
+:table-caption: Tabel
+:source-highlighter: rouge
+:sectnums:
+:sourcedir: src
+:includedir: isi
+:imagesdir: gambar
+:chapter-label: Bab
+:figure-caption: Gambar
+:icons: font
+////
+Use this if you create a full cover in one page
+:front-cover-image: image::./images/title_page.png[]
+////
+:title-logo-image: {imagesdir}/logo-zimera.png
+
+
+[preface]
+= Kata Pengantar
+
+Some text to describe preface of the book. Some text to describe preface of the book. Some text to describe preface of the book. Some text to describe preface of the book. Some text to describe preface of the book.  Some text to describe preface of the book. Some text to describe preface of the book.
+
+= Bagian I: 
+
+[partintro]
+--
+Bagian I membahas tentang
+--
+
+include::{includedir}/01-01-title.adoc[]
+
+include::{includedir}/01-02-title.adoc[]
+
+= Bagian II: 
+
+[partintro]
+--
+Bagian II membahas tentang
+--
+
+include::{includedir}/02-01-title.adoc[]
+
+include::{includedir}/02-02-title.adoc[]
+

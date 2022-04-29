@@ -1,31 +1,64 @@
-# Pemrograman Python
+# Book Template - AsciiDoc Version
 
-## Lisensi
+This book serves as a book template. To create a book, just clone this repo and start writing using [AsciiDoc](https://asciidoc.org/). Do note that this template uses Ruby version - [Asciidoctor](https://asciidoctor.org/). 
 
-![Creative Commons License](img/cc-by-sa.png)
+## Tools
 
-## Tentang Repo Ini
-
-Repo ini berisi kode sumber serta buku **Pemrograman Python** yang dibuat oleh [Magister Teknologi Informasi STMIK Akakom](http://pascasarjana.akakom.ac.id). Lisensi semua dokumen pada repo ini adalah [Creative Commons Atribution-ShareAlike 4.0 International License - CC-BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/). Secara umum, penggunaan lisensi ini mempunyai implikasi bahwa pengguna materi:
-
-1.  Harus memberikan atribusi ke penulis dan sponsor untuk penulisan materi ini (Magister Teknologi Tnformasi - STMIK Akakom).
-2.  Boleh menggunakan produk yang ada disini untuk keperluan apapun jika point 1 di atas terpenuhi.
-2.  Boleh membuat produk derivatif dari produk yang ada disini sepanjang perubahan-perubahan yang dilakukan diberitahukan ke kami dan di-*share* dengan menggunakan lisensi yang sama.
-
-Untuk penggunaan selain ketentuan tersebut, silahkan menghubungi:
+This template just need Ruby, Asciidoctor, and `asciidoctor-pdf`. Do this to install them (you should [install Ruby first](https://www.ruby-lang.org/en/downloads/)):
 
 ```
-Magister Teknologi Informasi
-STMIK Akakom
-Jl. Raya Janti Karangjambe no 143
-Yogyakarta 55198
-Indonesia
-Phone: 0274 486664
-https://pascasarjana.akakom.ac.id
-info.mti@akakom.ac.id
+$ gem install --user-install asciidoctor asciidoctor-pdf
 ```
 
-# Kompilasi ke format PDF
+## Compiling to PDF
 
-Materi ini dibuat menaggunakan markdown dan dikompilasi menjadi PDF dengan menggunakan template dari [repo ini](https://github.com/Wandmalfarbe/pandoc-latex-template). Jika akan berkontribusi atau mengedit, pastikan anda memahami markdown serta mempunyai [pandoc](http://pandoc.org) serta distribusi lengkap dari [TexLive](https://github.com/Wandmalfarbe/pandoc-latex-template),
+Use `Makefile`:
+
+```bash
+$ make
+```
+
+The result will be in [build](build/) directory.
+
+## Using This Template
+
+### Contents
+
+All contents are in [contents](contents/). You have to sync all those filenames in that directory with `book-title.adoc`. 
+
+### Images
+
+* All images reside in [images](images/). Of course you are free to arrange how to put the images inside, for example you may use `xx` directory where `xx` is *chapter*. For example, if you have image in chapter 01 - named `myImage.png`, then put `myImage.png` inside `ch01` directory inside `images`.
+* In Asciidoc document, use this source code:
+
+```asciidoc
+[#img-ch01-01]
+.Caption of the Image
+[link=https://www.onlywhenyouneedto.org]
+image::ch01/myImage.png[]
+```
+
+* If you want to make a link - *cross reference* which refers to the image:
+
+```asciidoc
+... lorem sum dolor lorem sum dolor lorem sum dolor <<#img-ch01-01>> ...
+```
+
+### Source Code
+
+* Put source code inside [src](src/). Also, you may manage whatever you like with how you put your source code (or maybe also depends on programming language that you use. for example in Rust you use `src/main.rs` inside a project, or in Java you use `src/main/java/package/App.java`. It's better if you put chapter number like `ch01` for chapter 01.
+* In asciidoc, use this source code (example in Rust - `ferris` is project name inside chapter 01):
+
+```
+[source,rust]
+----
+include::../{sourcedir}/ch01/ferris/src/main.rs[]
+----
+<1> Explanation - callout for number 1
+<2> Explanation - callout  for number 2
+```
+
+## License
+
+This template has [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0), however you are free to choose any license for your book.
 
