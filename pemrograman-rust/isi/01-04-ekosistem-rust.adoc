@@ -1,0 +1,51 @@
+== Ekosistem Rust (wip)
+
+=== Tentang Bab Ini (wip-nr)
+
+Mempelajari suatu bahasa pemrograman, khususnya dalam rangka untuk membangun aplikasi, tidak hanya
+selesai dengan mempelajari unsur bahasanya saja. Di luar itu, biasanya masih banyak unsur pendukung
+yang membentuk suatu ekosistem. Dengan memahami ekosistem Rust, seorang pemrogram yang menggunakan
+Rust akan relatif lebih mudah untuk menggunakan berbagai macam sumber daya untuk menyelesaikan
+masalah pemrograman yang dihadapi.
+
+=== Paket (_Crates_) (wip)
+
+
+=== _Crates_ yang Bermanfaat Bagi Pemrogram Rust (wip)
+
+==== Evcxr (https://github.com/google/evcxr/tree/master/evcxr_repl[]) (wip)
+
+_Crate_ ini digunakan sebagai REPL (_Read-Eval-Print-Loop_) untuk Rust. Untuk instalasi:
+
+.Evcxr
+[source,bash]
+----
+cargo install evcxr_repl
+----
+
+==== IRust (https://github.com/sigmaSd/IRust[]) (wip)
+
+_Crate_ ini juga digunakan sebagai REPL untuk Rust. Untuk instalasi:
+
+.IRust
+[source,bash]
+----
+cargo install irust
+----
+
+=== Berbagai Web untuk Melacak Status dalam Domain Tertentu (wip)
+
+Komunitas membangun berbagai situs Web untuk melacak kesiapan Rust dalam domain tertentu. Situs Web
+tersebut biasanya dikenal dengan nama **Are we X yet?** dengan **X** adalah domain tertentu
+tersebut. Daftar dari **Are we X yet?** bisa dilihat di https://wiki.mozilla.org/Areweyet[]
+
+=== Mengikuti Perkembangan Rust (wip)
+
+Ada berbagai sumber daya di Internet yang bisa digunakan untuk mengikuti perkembangan dari Rust
+serta ekosistemnya.
+
+1.  *This Week in Rust*, bisa diakses di https://this-week-in-rust.org/[]
+2.  *Twitter*, berbagai _account_ yang bisa diikuti:
+    * https://twitter.com/rustlang[]: Twitter resmi dari Rust
+    * _Hashtag_ #rustlang di Twitter
+

@@ -1,0 +1,492 @@
+== Struktur Data
+
+=== Struct
+
+*Struct* merupakan struktur data di Go yang digunakan untuk menampung koleksi *fields*. Mirip dengan DBMS, struct juga mengelola data dalam bentuk tabel: ada baris dan ada kolom. Kolom disebut dengan *field* sementara baris disebut dengan *record* dengan isi hanya 1. Berikut adalah contoh *struct*:
+
+```go
+package main
+
+import "fmt"
+
+type Pegawai struct {
+	Nama string
+	Usia int
+}
+
+func main() {
+
+	var pegawaiKantor1 Pegawai
+	fmt.Println(pegawaiKantor1)
+
+	var pegawaiKantor2 = Pegawai{"Peg kantor 2 - 1", 24}
+	fmt.Println(pegawaiKantor2)
+
+	var pegawaiKantor3 = Pegawai{Nama: "Peg kantor 3 - 1", Usia: 54}
+	fmt.Println(pegawaiKantor3)
+
+	pegawaiKantor4 := Pegawai{
+		Nama: "Peg kantor 4 - 1",
+		Usia: 54,
+	}
+	fmt.Println(pegawaiKantor4)
+	fmt.Println(pegawaiKantor4.Nama)
+	fmt.Println(pegawaiKantor4.Usia)
+	pegawaiKantor4.Nama = "Peg kantor 4 - baru"
+	fmt.Println(pegawaiKantor4)
+
+	var pPegawaiKantor4 = &pegawaiKantor4
+	var p2PegawaiKantor4 = &pegawaiKantor4
+
+	fmt.Println(*pPegawaiKantor4)
+	fmt.Println(*p2PegawaiKantor4)
+
+	pegawaiKantor4.Nama = "Pengganti pegawai kantor 4"
+
+	fmt.Println(*pPegawaiKantor4)
+	fmt.Println(*p2PegawaiKantor4)
+	fmt.Println((*p2PegawaiKantor4).Nama)
+
+	*pPegawaiKantor4 = Pegawai{Nama: "Pengganti lagi utk kantor 4", Usia: 25}
+
+	fmt.Println(*pPegawaiKantor4)
+	fmt.Println(*p2PegawaiKantor4)
+	fmt.Println((*p2PegawaiKantor4).Nama)
+
+	// pointer ke struct dengan new:
+	pPeg := new(Pegawai)
+
+	pPeg.Nama = "pPeg 1"
+	pPeg.Usia = 21
+
+	fmt.Println(pPeg)
+	fmt.Println(*pPeg)
+
+}
+```
+
+Hasil:
+
+```bash
+$ go run struct.go
+{ 0}
+{Peg kantor 2 - 1 24}
+{Peg kantor 3 - 1 54}
+{Peg kantor 4 - 1 54}
+Peg kantor 4 - 1
+54
+{Peg kantor 4 - baru 54}
+{Peg kantor 4 - baru 54}
+{Peg kantor 4 - baru 54}
+{Pengganti pegawai kantor 4 54}
+{Pengganti pegawai kantor 4 54}
+Pengganti pegawai kantor 4
+{Pengganti lagi utk kantor 4 25}
+{Pengganti lagi utk kantor 4 25}
+Pengganti lagi utk kantor 4
+&{pPeg 1 21}
+{pPeg 1 21}
+$
+```
+
+=== Method
+
+*Method* sering disebut juga *receiver function*. Pada dasarnya, *method* juga merupakan fungsi, tetapi khusus untuk struktur data *struct*.
+
+```go
+package main
+
+import "fmt"
+
+type Pegawai struct {
+	Nama string
+	Usia int
+}
+
+func (p Pegawai) print() {
+
+	fmt.Println("Nama: ", p.Nama, "Usia: ", p.Usia)
+
+}
+
+func (p *Pegawai) printPointer() {
+
+	fmt.Println("Nama: ", p.Nama, "Usia: ", p.Usia)
+}
+
+func main() {
+
+	var pegawaiKantor2 = Pegawai{"Peg kantor 2 - 1", 24}
+
+	pegawaiKantor2.print()
+
+	pPeg := &pegawaiKantor2
+
+	pPeg.printPointer()
+
+}
+```
+
+Hasilnya:
+
+```bash
+$ go run method.go
+Nama:  Peg kantor 2 - 1 Usia:  24
+Nama:  Peg kantor 2 - 1 Usia:  24
+$
+```
+
+=== Interfaces
+
+Pada bahasa pemrograman Go, *interfaces* digunakan untuk mengelompokkan koleksi method. 
+
+```go
+// https://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go
+package main
+
+import (
+	"fmt"
+)
+
+type Animal interface {
+	Speak() string
+}
+
+type Dog struct {
+}
+
+func (d Dog) Speak() string {
+	return "Woof!"
+}
+
+type Cat struct {
+}
+
+func (c Cat) Speak() string {
+	return "Meow!"
+}
+
+func main() {
+	animals := []Animal{Dog{}, Cat{}}
+	for _, animal := range animals {
+		fmt.Println(animal.Speak())
+	}
+}
+```
+
+Hasilnya:
+
+```bash
+$ go run interfaces.go
+Woof!
+Meow!
+$
+```
+
+=== Array
+
+Array (sering juga disebut larik) adalah struktur data yang digunakan untuk menampung banyak data dengan tipe dan ketentuan yang homogen. Misal, dalam universitas terdapat NIM (Nomor Induk Mahasiswa). Untuk keperluan itu, cukup mempunya satu nama variabel, setelah itu variabel tersebut mempunyai index, misal *mahasiswa[04]* untuk menunjukkan *mahasiswa pada urutan ke 5* (karena urutan indeks dimulai dai 0).
+
+```go
+// taken from: https://www.thegeekstuff.com/2019/03/go-array-examples/
+package main
+
+import "fmt"
+
+func main() {
+
+	// String Array
+	fmt.Println("1. String Array : ")
+
+	var distros [5]string
+	distros[0] = "Ubuntu"
+	distros[1] = "CentOS"
+	distros[2] = "RedHat"
+	distros[3] = "Debian"
+	distros[4] = "OpenBSD"
+
+	mydistro := distros[1]
+	fmt.Println("mydistro = ", mydistro)
+	fmt.Println("distros[2] = ", distros[2])
+	fmt.Println("distros = ", distros)
+	fmt.Println("Number of distros = ", len(distros))
+
+	// Integer Array (Numbers)
+	fmt.Println()
+	fmt.Println("2. Integer Array : ")
+
+	var ids [5]int
+	ids[0] = 1
+	ids[1] = 2
+	ids[2] = 3
+	ids[3] = 4
+	ids[4] = 5
+
+	myid := ids[3]
+	fmt.Println("myid = ", myid)
+	fmt.Println("ids[2] = ", ids[2])
+	fmt.Println("ids = ", ids)
+	fmt.Println("Number of ids = ", len(ids))
+
+	// Declare and Initialize Array at the same time
+	fmt.Println()
+	fmt.Println("3. Declare and Initialize Array at the same time : ")
+
+	os := [3]string{"Linux", "Mac", "Windows"}
+	fmt.Println("os = ", os)
+	fmt.Println("Number of os = ", len(os))
+
+	fibonacci := [6]int{1, 1, 2, 3, 5, 8}
+	fmt.Println("fibonacci = ", fibonacci)
+
+	// Multi-line Array Initialization Syntax
+	fmt.Println()
+	fmt.Println("4. Multi-line Array Initialization Syntax : ")
+
+	temperature := [3]float64{
+		98.5,
+		65.5,
+		83.2,
+	}
+	fmt.Println("temperature = ", temperature)
+
+	names := [3]string{
+		"John",
+		"Jason",
+		"Alica",
+		// "Rita",
+	}
+	fmt.Println("names = ", names)
+
+	// Default Values in an Array
+	fmt.Println()
+	fmt.Println("5. Default Values in an Array : ")
+
+	empIds := [5]int{101, 102, 103}
+	fmt.Println("empIds = ", empIds)
+
+	empNames := [5]string{"John", "Jason"}
+	fmt.Println("empNames = ", empNames)
+
+	// Loop through Array using For and Range
+	fmt.Println()
+	fmt.Println("6. Loop through Array using For and Range : ")
+
+	for index, value := range distros {
+		fmt.Println(index, " = ", value)
+	}
+
+	// Loop through Array using For and Range (Ignore Index)
+	fmt.Println()
+	fmt.Println("7. Loop through Array using For and Range (Ignore Index) : ")
+
+	total := 0
+	for _, value := range ids {
+		total = total + value
+	}
+	fmt.Println("total of all ids = ", total)
+
+	// Initialize an integer array with sequence
+	fmt.Println()
+	fmt.Println("8. Initialize an integer array with sequence : ")
+	var sequence [10]int
+	counter := 10
+	for index, _ := range sequence {
+		sequence[index] = counter
+		counter = counter + 5
+	}
+	fmt.Println("sequence = ", sequence)
+
+	// Multi dimensional array
+	fmt.Println()
+	fmt.Println("9. Multi dimensional array : ")
+
+	count := 1
+	var multi [4][2]int
+	for i := 0; i < 4; i++ {
+		for j := 0; j < 2; j++ {
+			multi[i][j] = count
+			count++
+		}
+	}
+	fmt.Println("Array 4 x 2 : ", multi)
+
+}
+```
+
+Hasilnya:
+
+```bash
+$ go run array.go
+1. String Array :
+mydistro =  CentOS
+distros[2] =  RedHat
+distros =  [Ubuntu CentOS RedHat Debian OpenBSD]
+Number of distros =  5
+
+2. Integer Array :
+myid =  4
+ids[2] =  3
+ids =  [1 2 3 4 5]
+Number of ids =  5
+
+3. Declare and Initialize Array at the same time :
+os =  [Linux Mac Windows]
+Number of os =  3
+fibonacci =  [1 1 2 3 5 8]
+
+4. Multi-line Array Initialization Syntax :
+temperature =  [98.5 65.5 83.2]
+names =  [John Jason Alica]
+
+5. Default Values in an Array :
+empIds =  [101 102 103 0 0]
+empNames =  [John Jason   ]
+
+6. Loop through Array using For and Range :
+0  =  Ubuntu
+1  =  CentOS
+2  =  RedHat
+3  =  Debian
+4  =  OpenBSD
+
+7. Loop through Array using For and Range (Ignore Index) :
+total of all ids =  15
+
+8. Initialize an integer array with sequence :
+sequence =  [10 15 20 25 30 35 40 45 50 55]
+
+9. Multi dimensional array :
+Array 4 x 2 :  [[1 2] [3 4] [5 6] [7 8]]
+```
+
+=== Slices
+
+Slices mirip dengan array, hanya saja slices tidak menentukan jumlah elemennya. Jadi, ukuran dari slices merupakan ukuran yang dinamis. 
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+
+	distros := [6]string{"arch", "gentoo", "opensuse", "devuan", "debian", "fedora"}
+
+	var myDistros []string = distros[3:5]
+
+	fmt.Println(myDistros)
+	fmt.Println(myDistros[0])
+
+	distros[4] = "Ubuntu"
+
+	// slices merupakan referensi ke array. Jika array diubah, slices juga berubah
+	// karena menunjuk ke lokasi memory yang sama
+	fmt.Println(myDistros)
+
+	// membuat slices dengan cara ini juga bisa:
+	b := make([]int, 1, 5)
+	fmt.Println(b)
+
+	b[0] = 2
+	fmt.Println(len(b))
+	fmt.Println(b[0])
+
+}
+```
+
+```bash
+$ go run slices.go
+[devuan debian]
+devuan
+[devuan Ubuntu]
+[0]
+1
+2
+$
+```
+
+=== Map
+
+*Map* merupakan implementasi dari `hash table` di Go. Go menyediakan fasilitas untuk *lookup*, menambah, mengedit, dan menghapus suatu *key* dan *value* dari *map*.
+
+```go
+package main
+
+import "fmt"
+
+type Pegawai struct {
+	Nama string
+	Usia int
+}
+
+func main() {
+
+	var mPeg = make(map[string]Pegawai)
+
+	mPeg["p0001"] = Pegawai{Nama: "Peg 1", Usia: 23}
+	fmt.Println(mPeg)
+
+	mPeg["p0001"] = Pegawai{Nama: "Peg 1 - edit", Usia: 24}
+	fmt.Println(mPeg)
+
+	mPeg["p0002"] = Pegawai{Nama: "Peg 2", Usia: 29}
+	fmt.Println(mPeg)
+
+	// iterasi
+	for key, value := range mPeg {
+		fmt.Println("NIP:", key, "Nama:", value.Nama, "Usia:", value.Usia)
+	}
+
+	// memeriksa ada atau tidak
+	_, ok := mPeg["p0002"]
+	if ok {
+		fmt.Println("Ada pegawai dengan NIP p0002")
+	}
+
+	// contoh inisialisasi lagi
+	mPeg2 := map[string]Pegawai{
+		"p0003": {Nama: "Peg 3", Usia: 34},
+		"p0004": {Nama: "Peg 4", Usia: 35},
+		"p0005": {Nama: "Peg 5", Usia: 36},
+		"p0006": {Nama: "Peg 6", Usia: 37},
+		"p0007": {Nama: "Peg 7", Usia: 38},
+		"p0008": {Nama: "Peg 8", Usia: 39},
+	}
+	fmt.Println(mPeg2)
+	fmt.Println(mPeg2["p0008"])
+
+	fmt.Println("Jumlah mPeg: ", len(mPeg))
+	fmt.Println("Jumlah mPeg2: ", len(mPeg2))
+
+	delete(mPeg2, "p0008")
+
+	fmt.Println("Jumlah mPeg: ", len(mPeg))
+	fmt.Println("Jumlah mPeg2: ", len(mPeg2))
+
+	fmt.Println(mPeg2)
+	fmt.Println(mPeg2["p0008"])
+
+}
+```
+
+Hasilnya:
+
+```bash
+$ go run map.go
+map[p0001:{Peg 1 23}]
+map[p0001:{Peg 1 - edit 24}]
+map[p0001:{Peg 1 - edit 24} p0002:{Peg 2 29}]
+NIP: p0001 Nama: Peg 1 - edit Usia: 24
+NIP: p0002 Nama: Peg 2 Usia: 29
+Ada pegawai dengan NIP p0002
+map[p0003:{Peg 3 34} p0004:{Peg 4 35} p0005:{Peg 5 36} p0006:{Peg 6 37} p0007:{Peg 7 38} p0008:{Peg 8 39}]
+{Peg 8 39}
+Jumlah mPeg:  2
+Jumlah mPeg2:  6
+Jumlah mPeg:  2
+Jumlah mPeg2:  5
+map[p0003:{Peg 3 34} p0004:{Peg 4 35} p0005:{Peg 5 36} p0006:{Peg 6 37} p0007:{Peg 7 38}]
+{ 0}
+$
+```

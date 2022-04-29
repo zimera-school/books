@@ -1,0 +1,101 @@
+= Pemrograman Go
+Dr. Bambang Purnomosidi D. P. <bambangpdp@gmail.com>
+v0.0.1-rev-{localdatetime}
+:doctype: book
+:toc:
+:toc-title: Daftar Isi
+:table-caption: Tabel
+:source-highlighter: rouge
+:sectnums:
+:description: Buku ini membahas pemrograman menggunakan bahasa pemrograman serta \
+              peranti pengembangan Go. Materi yang dibahas meliputi materi dasar \
+              mulai dari instalasi, sintaksis, dan ekosistem Go sampai ke materi \
+              yang bersifat terapan untuk kasus-kasus tertentu.
+:sourcedir: src
+:includedir: isi
+:imagesdir: gambar
+:chapter-label: Bab
+:figure-caption: Gambar
+:icons: font
+////
+Use this if you create a full cover in one page
+:front-cover-image: image::./images/title_page.png[]
+////
+//:title-logo-image: gambar/logo.png
+
+
+[preface]
+= Preface 
+
+image::logo-zimera.png[Zimera Systems, 150, 150]
+
+Buku ini merupakan buku bebas tentang bahasa pemrograman Go. Go merupakah bahasa pemrograman yang dirancang dan pertama kali diimplementasikan oleh Robert Griesemer, Rob Pike, dan Ken Thompson di Google. Go banyak digunakan pada sistem terdistribusi dan sistem berbasis Cloud. Buku ini dibuat dengan sponsor dari Zimera Systems dan mempunyai lisensi *Creative Commons Attribution-ShareAlike 4.0 International*.
+
+image::cc-by-sa.png[CC-BY-SA 4.0 International]
+
+* https://creativecommons.org/licenses/by-sa/4.0/deed.id[Lisensi dalam Bahasa Indonesia - https://creativecommons.org/licenses/by-sa/4.0/deed.id].
+* https://creativecommons.org/licenses/by-sa/4.0/deed.en[Lisensi dalam Bahasa Inggris - https://creativecommons.org/licenses/by-sa/4.0/deed.en].
+
+Secara umum, penggunaan lisensi ini mempunyai implikasi bahwa pengguna materi: 
+
+1.  Harus memberikan atribusi ke penulis dan sponsor untuk penulisan materi ini.
+2.  Boleh menggunakan produk yang ada disini untuk keperluan apapun jika point 1 di atas terpenuhi.
+3.  Boleh membuat produk derivatif dari produk yang ada disini sepanjang perubahan-perubahan yang dilakukan diberitahukan ke kami dan di-share dengan menggunakan lisensi yang sama.
+
+### Atribusi
+
+*Dr. Bambang Purnomosidi D. P.* +
+*_Zimera Systems_* +
+Dusun Medelan, Umbulmartani, Ngemplak +
+Sleman, DIY + 
+https://www.google.com/maps/place/Zimera+Systems/@-7.6975303,110.43921,17z/data=!3m1!4b1!4m5!3m4!1s0x2e7a5d7cc40e8871:0x2d44da15f0b3781e!8m2!3d-7.6975303!4d110.4413987 +
+E-mail: zimera-systems@gmail.com
+
+Pembuatan buku ini merupakan hasil pekerjaan kolektif baik secara langsung maupun tidak langsung. Penulis serta kontributor mengucapkan terima kasih untuk Zimera Systems yang telah memberikan *sponsorship* selama penulisan buku ini.
+
+= Bagian I: Go dan Peranti Pengembangan Go
+
+[partintro]
+--
+Bagian ini membahas tentang pengenalan Go secara umum dan bagaimana menyiapkan peranti pengembangan jika ingin membuat program meggunakan Go.
+--
+
+include::{includedir}/01-01-pengenalan-go.adoc[]
+
+include::{includedir}/01-02-ide-untuk-go.adoc[]
+
+include::{includedir}/01-03-struktur-program-go.adoc[]
+
+= Part II: Sintaksis Go
+
+[partintro]
+--
+Bagian ini membahas tentang sintaks dari bahasa pemrograman Go.
+--
+
+include::{includedir}/02-01-sintaksis-dasar.adoc[]
+
+include::{includedir}/02-02-fungsi.adoc[]
+
+include::{includedir}/02-03-penanganan-kesalahan.adoc[]
+
+include::{includedir}/02-04-struktur-data.adoc[]
+
+include::{includedir}/02-05-konkurensi-paralelisme.adoc[]
+
+= Part III: Go untuk Kasus Spesifik 
+
+[partintro]
+--
+Bagian ini membahas tentang penggunaan Go untuk menyelesaikan masalah tertentu dalam pembuatan software. Penyelesaian masalah bisa dilakukan dengan menggunakan pustaka standar maupun pustaka pihak ketiga. Pada bagian ini, pembahasan tidak hanya ditujukan pada pustaka standar tetapi juga pustaka pihak ketiga selama bisa digunakan untuk menyelesaiakn masalah dalam domain masalah tertentu.
+--
+
+include::{includedir}/03-01-testing.adoc[]
+
+include::{includedir}/03-02-io-dan-filesystems.adoc[]
+
+include::{includedir}/03-03-akses-basis-data.adoc[]
+
+include::{includedir}/03-04-sistem-terdistribusi.adoc[]
+
+include::{includedir}/03-05-aplikasi-web.adoc[]

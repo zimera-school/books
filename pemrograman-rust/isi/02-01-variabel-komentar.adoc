@@ -1,0 +1,24 @@
+== Variabel dan Komentar (wip)
+
+=== Tentang Bab Ini (wip)
+
+Pada bab ini, akan dibahas tentang pengelolaan data yang ada di memory yang telah di-anotasi dengan nama tertentu. Data yang berada pada memory tersebut di-anotasi dengan cara memberikan nama. Data tersebut dikenal dengan istilah *variabel*. Variabel ada yang bersifat *mutable* (bisa diubah), ada juga yang bersifat *immutable* (tidak bisa diubah). Pada bab ini juga akan dibahas perbedaan antara konstanta dengan variabel yang bersifat *immutable*.
+
+=== Variabel dan *Immutability*
+
+[source,rust]
+.src/02-01/variabel-mutable/src/main.rs
+----
+include::../{sourcedir}/02-01/variabel-mutable/src/main.rs[]
+----
+<1> Menggunakan *let* untuk deklarasi variabel yang bisa diubah isinya (*mutable*).
+<2> Mengubah nilai suatu variabel.
+
+
+=== Konstanta
+
+
+
+=== Perbedaan Variabel yang *Immutable* dengan Konstanta
+
+
