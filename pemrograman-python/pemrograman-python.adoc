@@ -27,25 +27,45 @@ Use this if you create a full cover in one page
 
 Some text to describe preface of the book. Some text to describe preface of the book. Some text to describe preface of the book. Some text to describe preface of the book. Some text to describe preface of the book.  Some text to describe preface of the book. Some text to describe preface of the book.
 
-= Bagian I: 
+= Bagian I: Ekosistem Bahasa Pemrograman Python
 
 [partintro]
 --
-Bagian I membahas tentang
+Bagian I membahas tentang pengenalan bahasa pemrograman Python serta ekosistem yang melingkupi bahasa pemrograman Python. Pembahasan tentang hal ini diperlukan untuk mendapatkan gambaran garis besar dari bahasa pemrograman Python serta berbagai masalah pemrograman yang bisa diselesaikan menggunakan Python dan penyiapan berbagai perangkat untuk pengembangan software menggunakan bahasa pemrograman Python.
 --
 
-include::{includedir}/01-01-title.adoc[]
+include::{includedir}/01-01-mengenal-python.adoc[]
 
-include::{includedir}/01-02-title.adoc[]
+include::{includedir}/01-02-algoritma-pemrograma-paradigma-python.adoc[]
 
-= Bagian II: 
+include::{includedir}/01-03-persiapan-peranti-pengembangan.adoc[]
+
+= Bagian II: Sintaksis Bahasa Pemrograman Python
 
 [partintro]
 --
-Bagian II membahas tentang
+Bagian II membahas tentang sisi teknis sintaksis bahasa pemrograman Python serta implementasi berbagai paradigma pemrograman menggunakan Python.
 --
 
-include::{includedir}/02-01-title.adoc[]
+include::{includedir}/02-01-mulai-menggunakan-python.adoc[]
 
-include::{includedir}/02-02-title.adoc[]
+include::{includedir}/02-02-dasar-dasar-python.adoc[]
+
+include::{includedir}/02-03-pengendalian-alur-program.adoc[]
+
+include::{includedir}/02-04-fungsi.adoc[]
+
+include::{includedir}/02-05-struktur-data-python.adoc[]
+
+include::{includedir}/02-06-modul-conda.adoc[]
+
+include::{includedir}/02-07-operasi-io.adoc[]
+
+include::{includedir}/02-08-menangani-error-exception.adoc[]
+
+include::{includedir}/02-09-oop.adoc[]
+
+include::{includedir}/02-10-functional-programming-python.adoc[]
+
+include::{includedir}/02-11-concurrent-programming-python.adoc[]
 
