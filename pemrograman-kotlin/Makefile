@@ -1,2 +1,2 @@
-pdf:
-	pandoc --pdf-engine=xelatex -o hasil/kotlin-crashcourse.pdf --toc --from markdown --template eisvogel --listings --top-level-division=chapter isi/*
+all:
+	asciidoctor-pdf -D hasil/ -a pdf-themesdir=resources/themes -a pdf-theme=zimera pemrograman-kotlin.adoc
