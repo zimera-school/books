@@ -11,4 +11,7 @@ Jika ingin berkontribusi, silahkan mempelajari [cara berkontribusi](kontribusi.m
 
 ## Non-free / Proprietary Books
 
-1.  [Pemrograman Berbasis Piranti Bergerak](http://bahanajar.ut.ac.id/books/bookdetail/1378/MSIM4401---Pemrograman-Berbasis-Piranti-Bergerak).
+| No | Title | ISBN Search | Book Website | Cover |
+|----|-------|-------------|--------------|-------|
+| 1. | Pemrograman Berbasis Piranti Bergerak | https://isbn.perpusnas.go.id/Account/SearchBuku?searchTxt=978-623-312-884-1&searchCat=ISBN | http://bahanajar.ut.ac.id/books/bookdetail/1378/MSIM4401---Pemrograman-Berbasis-Piranti-Bergerak | ![cover](images/buku-piranti-bergerak.jpg) |
+
