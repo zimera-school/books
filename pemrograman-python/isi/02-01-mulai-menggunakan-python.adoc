@@ -3,46 +3,15 @@
 Python bisa digunakan dengan 2 cara:
 
 1. REPL (*Read-Eval-Print-Loop*)
-2. *Coding* - membuat source code dalam Python dan eksekusi / jalankan menggunakan *interpreter* Python.
+2. *Coding* - membuat kode sumber dalam bahasa pemrograman Python dan kemudian di-eksekusi / dijalankan menggunakan *interpreter* Python.
 
 === REPL
 	
-REPL digunakan untuk keperluan mencoba potongan source code:
+REPL digunakan untuk keperluan mencoba potongan kode sumber. Untuk keluar dari REPL maupun dari *help>*, gunakan *Ctrl-D*
 
 [source,shell]
 ----
-» python
-Python 3.7.4 (default, Aug 13 2019, 20:35:49)
-[GCC 7.3.0] :: Anaconda, Inc. on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> help
-Type help() for interactive help, or help(object) for help about object.
->>> help()
-
-Welcome to Python 3.7's help utility!
-
-If this is your first time using Python, you should definitely check out
-the tutorial on the Internet at https://docs.python.org/3.7/tutorial/.
-
-Enter the name of any module, keyword, or topic to get help on writing
-Python programs and using Python modules.  To quit this help utility and
-return to the interpreter, just type "quit".
-
-To get a list of available modules, keywords, symbols, or topics, type
-"modules", "keywords", "symbols", or "topics".  Each module also comes
-with a one-line summary of what it does; to list the modules whose name
-or summary contain a given string such as "spam", type "modules spam".
-
-help> for
-
-help> while
-
-help>
-You are now leaving help and returning to the Python interpreter.
-If you want to ask for help on a particular object directly from the
-interpreter, you can type "help(object)".  Executing "help('string')"
-has the same effect as typing a particular string at the help> prompt.
->>>> 
+include::../{sourcedir}/screen/02-01/01-repl.txt[]
 ----
 
 Contoh penggunaan:
@@ -72,40 +41,40 @@ Jika software yang akan dibuat mulai besar dan serius, maka REPL tidak cocok dig
 
 1. Cara 1
 +
-[source,python]
+[source,shell]
 ----
 # hello.py 
 print('Halo')
-» python hello.py 
+$ python hello.py 
 Halo
-» 
+$ 
 ----
 +
 2. Cara 2
 +
-[source,python]
+[source,shell]
 ----
 # hello2.py 
 #!/usr/bin/env python
 
 print('Halo')
-» chmod +x hello2.py
-» ./hello2.py 
+$ chmod +x hello2.py
+$ ./hello2.py 
 Halo
-» 
+$ 
 ----
 +
 3. Cara 3
 +
-[source,python]
+[source,shell]
 ----
-#hello3.py 
+# hello3.py 
 #!/opt/software/python-dev-tools/miniconda3/bin/python
 
 print('Halo')
-» chmod +x hello2.py
-» ./hello3.py 
+$ chmod +x hello2.py
+$ ./hello3.py 
 Halo
-» 
+$ 
 ----
 

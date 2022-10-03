@@ -1,0 +1,108 @@
+== Persiapan Peranti Pengembangan
+
+=== Persyaratan Sistem untuk Python
+
+Persyaratan sistem untuk menggunakan Python tidak berat, cukup dengan RAM 2 GB dan spesifikasi laptop / PC biasa (Intel/AMD processor) sudah bisa digunakan untuk menjalankan Python. Setelah itu, perhatikan kebutuhan terkait masalah yang ingin diselesaikan. Jika hanya digunakan untuk materi pelajaran Python biasa, maka spesifikasi di atas sudah cukup. Jika melibatkan proses pemrograman dan pembuatan software yang relatif serius dan menggunakan sumber daya yang besar (misal mengolah data sampai dengan jutaan rekaman, proses *machine learning* dengan materi *training* yang bsar, dan sejenisnya), maka spesifikasi di atas tentu saja tidak cukup. Untuk *machine learning* bahkan diperlukan peranti dengan GPU dengan memory serta processor sangat besar.
+
+=== Instalasi Python - Miniconda
+
+Pada umumnya, komputer yang diinstall Linux sudah mempunyai Python. Meskipun demikian, seringkali versi yang ada masih versi lama. Proses uninstall untuk kasus tersebut juga tidak memungkinkan karena biasanya akan membuat banyak software lainnya menjadi tidak bisa digunakan di komputer tersebut (broken). Miniconda memungkinkan kita menginstall versi stabil maupun versi lainnya. Distribusi Miniconda bisa diperoleh di https://conda.io/miniconda.html. Contoh instalasi akan diberikan untuk Linux 64 bit dan Python versi 3. Download pada lokasi di atas, setelah itu jalankan file tersebut setelah di - chmod:
+
+[source,shell]
+----
+include::../{sourcedir}/screen/01-02/01-install-miniconda.txt[]
+----
+
+Setelah itu, atur environment variable (variabel lingkungan) pada file dan source file tersebut setiap kali ingin menjalankan Python dari Anaconda. Jika menggunakan shell *Fish*:
+
+[source,shell]
+----
+include::../{sourcedir}/screen/01-02/02-env.fish[]
+----
+
+Jika menggunakan shell *Bash*:
+
+[source,shell]
+----
+include::../{sourcedir}/screen/01-02/02-env.bash[]
+----
+
+Setelah itu, _interpreter_ Python dan *conda* bisa dijalankan:
+
+[source,shell]
+----
+$ python
+Python 3.9.12 (main, Apr  5 2022, 06:56:58)
+[GCC 7.5.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+----
+
+Untuk menjalankan conda:
+
+[source,shell]
+----
+$ conda
+usage: conda [-h] [-V] command ...
+
+conda is a tool for managing and deploying applications, environments and packages.
+
+Options:
+
+positional arguments:
+  command
+    clean        Remove unused packages and caches.
+    compare      Compare packages between conda environments.
+    config       Modify configuration values in .condarc. This is modeled after the git config command. Writes to the user .condarc file
+                 (/home/bpdp/.condarc) by default.
+    create       Create a new conda environment from a list of specified packages.
+    help         Displays a list of available conda commands and their help strings.
+    info         Display information about current conda install.
+    init         Initialize conda for shell interaction. [Experimental]
+    install      Installs a list of packages into a specified conda environment.
+    list         List linked packages in a conda environment.
+    package      Low-level conda package utility. (EXPERIMENTAL)
+    remove       Remove a list of packages from a specified conda environment.
+    uninstall    Alias for conda remove.
+    run          Run an executable in a conda environment.
+    search       Search for packages and display associated information. The input is a MatchSpec, a query language for conda packages. See
+                 examples below.
+    update       Updates conda packages to the latest compatible version.
+    upgrade      Alias for conda update.
+
+optional arguments:
+  -h, --help     Show this help message and exit.
+  -V, --version  Show the conda version number and exit.
+
+conda commands available from other packages:
+  content-trust
+  env
+----
+
+Jika menggunakan Windows, instalasi dengan Windows installer sudah melakukan berbagai konfigurasi sehingga bisa menjalankan langsung dari command prompt. Jika langkah-langkah di atas bisa dilakukan, maka Python dan conda sudah terinstall. Python akan digunakan untuk menjalankan source code dalam bahasa pemrograman Python, sementara conda akan digunakan untuk mengelola paket serta variabel lingkungan.
+
+=== Peranti Pendukung: IDE atau Editor Teks
+
+Peranti pendukung untuk Python yang paling utama adalah IDE (*Integrated Development Environment*). IDE merupakan software yang berisi berbagai peranti untuk membantu proses pengembangan aplikasi dan terdiri atas komponen yang lengkap, mulai dari komponen editor untuk mengetikkan program sampai dengan *debugger* untuk pencarian kesalahan maupun *profiler* untuk mengoptimasi program yang dibuat. Sebenarnya, komponen minimal dari peranti pendukung yang harus ada adalah editor teks (*text editor*). Editor teks digunakan untuk menuliskan program, biasanya mempunyai fasilitas *syntax highlighting*. Beberapa editor teks memang sudah menyertakan fasiltas tersebut sebagai fasilitas standar (misal Vim di Linux, Notepad++ di Windows).
+
+Jika editor teks biasa dirasa tidak mencukupi, maka bisa digunakan IDE. Ada banyak IDE yang bisa digunakan di Python, tetepi di buku ini akan digunakan Visual Studio Code yang bisa diperoleh di https://code.visualstudio.com/. Secara default, VSCode tidak mempunyai dukungan IDE untuk Python, sehingga perlu menginstall *extension* untuk Python. VSCode mensyaratkan RAM minimum 4 GB.
+
+=== Instalasi Visual Studio Code
+
+VSCode tersedia untuk setidaknya 3 platform: Windows, Mac, dan Linux. Download VSCode dari https://code.visualstudio.com/Download dan ekstrak file tersebut di lokasi pilihan masing-masing. Setelah itu, jalankan dengan memanggil **code**. Pada semua platform, VSCode akan mempunyai tampilan yang sama seperti yang terdapat pada <<#gbr-vscode-awal>>.
+
+[#gbr-vscode-awal]
+.Tampilan awal dari Visual Studio Code
+[link=https://code.visualstudio.com]
+image::01-03/vscode-awal.png[]
+
+Pada posisi ini, semua platform mempunyai cara pengoperasian yang sama.
+
+=== Instalasi Extension
+
+Extension Python untuk VSCode tersedia di *marketplace* pada URL https://marketplace.visualstudio.com/items?itemName=ms-python.python. Untuk melakukan instalasi extension, buka *Extensions* di VSCode dengan klik tombol Extensions pada sisi kiri atau tekan langsung *Ctrl-Shift-X*. Setelah itu, cari dan install. Pilih Extension dari Microsoft kemudian klik *Install*. Bisa juga menggunakan Quick Open atau *Ctrl-P* kemudian memasukkan perintah berikut: 
+
+[source,bash]
+----
+ext install ms-python.python
+----

@@ -106,35 +106,33 @@ bahasa pemrograman. Manual bahasa pemrograman biasanya minimal terdiri atas 2 ba
 Setelah itu, implementasikan algoritma tersebut:
 
 [source,python]
+.src/01-03/angka-max/01-max.py
 ----
-angka1 = input("Masukkan angka pertama: ")
-angka2 = input("Masukkan angka kedua: ")
-
-if angka1 > angka2:
-  print("Nilai terbesar: ", angka1)
-elif angka1 < angka2:
-  print("Nilai terbesar: ", angka2)
-elif angka1 == angka2:
-  print("Kedua angka sama, tidak ada yang terbesar")
-else:
-  print("Ada masalah dengan angka masukan anda")
+include::../{sourcedir}/01-03/angka-max/01-max.py[]
 ----
+<1> Perintah *input* digunakan untuk meminta masukan melalui keyboard
+<2> *if* digunakan untuk memeriksa ekpresi dan melakukan sesuatu berdasarkan hasil pemeriksaan. *(angka1 > angka2)* adalah bentuk ekspresi.
+<3> *print* pada bagian ini adalah perintah yang akan dikerjakan jika hasil pemeriksaan ekspresi menghasilkan nilai benar (_True_).
 
 Untuk menjalankan:
 
 [source,shell]
 ----
-$ python max.py
-Masukkan angka pertama: 3
-Masukkan angka kedua: 4
-Nilai terbesar:  4
-$ python max.py
-Masukkan angka pertama: 4
-Masukkan angka kedua: 3
-Nilai terbesar:  4
-$ python max.py
-Masukkan angka pertama: 5
-Masukkan angka kedua: 5
-Kedua angka sama, tidak ada yang terbesar
-$
+include::../{sourcedir}/01-03/angka-max/01-hasil.txt[]
+----
+
+Setelah algoritma diimplementasikan dan kemudian kode sumber bisa dijalankan, maka seringkali muncul masalah. Sebagai contoh, kode sumber di atas sudah bisa dijalankan dengan baik, tetapi jika diisikan bukan angka, maka kode sumber tetap berjalan dan memberikan hasil. Hal ini tentu saja tidak diinginkan. Apa yang harus dilakukan? secara sederhana, pemrogram kemudian berpikir bahwa *berarti harus ada mekanisme untuk memeriksa apakah angka yang dimasukkan tersebut angka atau bukan*. Setelah mempunyai pikiran seperti ini, pemrogram kemudian mencari cara (di manual, di Internet, bertanya ke rekan-rekan, dan lain-lain) untuk memeriksa apakah input yang dimasukkan tersebut angka atau bukan. Dari proses pencarian, diperoleh suatu fungsi untuk memeriksa apakah angka atau bukan, yaitu *isnumeric*. Kode sumber kemudian kita ubah untuk keperluan tersebut.
+
+[source,python]
+.src/01-03/angka-max/02-max-check-numeric.py
+----
+include::../{sourcedir}/01-03/angka-max/02-max-check-numeric.py[]
+----
+<1> Memeriksa apakah isi angka1 dan angka2 numerik atau bukan dengan *isnumeric()*
+
+Untuk menjalankan:
+
+[source,shell]
+----
+include::../{sourcedir}/01-03/angka-max/02-hasil.txt[]
 ----

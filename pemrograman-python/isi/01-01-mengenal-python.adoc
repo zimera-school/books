@@ -22,16 +22,16 @@ Beberapa domain aplikasi Python antara lain adalah sebagai berikut:
 
 Secara umum, software Python biasanya bisa diambil dari https://www.python.org meskipun beberapa perusahan maupun komunitas developer juga membuat distribusi Python maupun versi interpreter Python untuk platform tertentu. Python dari situs web tersebut dikenal dengan istilah **CPython** dan merupakan *reference implementation* dari spesifikasi Python. Beberapa distribusi atau implementasi Python lainnya:
 
-* **Jython** (Python di JVM).
-* **Pyston** (Python iyang dimplementasikan dengan teknik JIT).
-* **RustPython** (Python yang diimplementasikan menggunakan bahasa pemrograman Rust)
-* **IronPython** (Python di .NET)
-* **Stackless** (Python dengan microthreads - threads yang tidak dikelola oleh OS, tetapi dikelola oleh Stackless).
-* **MicroPython** (Python untuk microcontroller)
-* **CircuitPython** (turuan dari MicroPython untuk siswa dan pemula).
-* **PyPy** (Python JIT Compiler)
-* **Anaconda** (Python standar yang sudah menyertakan conda).
-* **Intel Distribution for Python**, bisa diperoleh di situs Intel (https://software.intel.com/en-us/python-distribution).
+* **Jython** (Python di JVM) - https://www.jython.org/
+* **Pyston** (Python yang dimplementasikan dengan teknik JIT) - https://www.pyston.org/
+* **RustPython** (Python yang diimplementasikan menggunakan bahasa pemrograman Rust) - https://rustpython.github.io/
+* **IronPython** (Python di .NET) - https://ironpython.net/
+* **Stackless** (Python dengan microthreads - threads yang tidak dikelola oleh OS, tetapi dikelola oleh Stackless) - http://www.stackless.com/
+* **MicroPython** (Python untuk microcontroller) - https://micropython.org/
+* **CircuitPython** (Turunan dari MicroPython untuk siswa dan pemula) - https://circuitpython.org/
+* **PyPy** (Python JIT Compiler) - https://www.pypy.org/
+* **Anaconda** (Python standar yang sudah menyertakan conda) - https://anaconda.org/
+* **Intel Distribution for Python** (Distribusi Python yang dibuat oleh Intel) - https://software.intel.com/en-us/python-distribution).
 
-Materi di buku ini menggunakan standar Python (CPython) serta Anaconda / Miniconda / conda. Saat ini, versi Python ada 2: versi 2.x dan versi 3.x. Keduanya tidak kompatibel. Materi ini menggunakan versi 3.x. Untuk proyek pengembangan software yang baru, disarankan untuk menggunakan Python 3 karena Python 2 sudah akan memasuki fase EOL **End Of Life** pada bulan Januari 2020. Status mengenai Python 2.0 bisa dilihat pada URL berikut: https://www.python.org/dev/peps/pep-0373/. 
+Materi di buku ini menggunakan standar Python (CPython) serta Anaconda / Miniconda / conda. Saat ini, versi Python ada 2: versi 2.x dan versi 3.x. Keduanya tidak kompatibel. Materi ini menggunakan versi 3.x. Untuk proyek pengembangan software yang baru, disarankan untuk menggunakan Python 3 karena Python 2 sudah memasuki fase EOL **End Of Life** pada bulan Januari 2020. Status mengenai Python 2.0 bisa dilihat pada URL berikut: https://www.python.org/dev/peps/pep-0373/. 
 

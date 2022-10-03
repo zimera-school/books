@@ -1,0 +1,5 @@
+$ python 02-max-check-numeric.py
+Masukkan angka pertama: abc
+Masukkan angka kedua: def
+Anda tidak memasukkan angka
+$

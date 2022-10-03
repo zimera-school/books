@@ -1,0 +1,13 @@
+$ python max.py
+Masukkan angka pertama: 43
+Masukkan angka kedua: 12
+Nilai terbesar:  43
+$ python max.py
+Masukkan angka pertama: 11
+Masukkan angka kedua: 11
+Kedua angka sama, tidak ada yang terbesar
+$ python max.py
+Masukkan angka pertama: abc
+Masukkan angka kedua: def
+Nilai terbesar:  def
+$

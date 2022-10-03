@@ -1,4 +1,4 @@
-= Pemrograman Python
+= Algoritma, Struktur Data, dan Paradigma Pemrograman Menggunakan Python
 Dr. Bambang Purnomosidi D. P. <bambangpdp@gmail.com>
 v0.0.1-rev-{localdatetime}
 :description: Buku ini membahas tentang dasar-dasar pemrograman menggunakan Python \
@@ -19,13 +19,13 @@ untuk digunakan para pembelajar di Zimera School tetapi bebas dipakai di mana sa
 Use this if you create a full cover in one page
 :front-cover-image: image::./images/title_page.png[]
 ////
-:title-logo-image: {imagesdir}/logo-zimera.png
+:title-logo-image: {imagesdir}/logo.png
 
 
 [preface]
 = Kata Pengantar
 
-Some text to describe preface of the book. Some text to describe preface of the book. Some text to describe preface of the book. Some text to describe preface of the book. Some text to describe preface of the book.  Some text to describe preface of the book. Some text to describe preface of the book.
+Selamat datang di buku Algoritam, Struktur Data, dan Paradigma Pemrograman Menggunakan Python. Buku ini merupakan buku yang digunakan di Zimera School sebagai buku pegangan untuk para pembelajar dalam mempelajari Python. Silakan menggunakan buku ini dan diijinkan untuk menyebarkan format PDF dari buku ini ke siapa saja tanpa mengedit isinya. Terima kasih.
 
 = Bagian I: Ekosistem Bahasa Pemrograman Python
 
@@ -36,9 +36,9 @@ Bagian I membahas tentang pengenalan bahasa pemrograman Python serta ekosistem y
 
 include::{includedir}/01-01-mengenal-python.adoc[]
 
-include::{includedir}/01-02-algoritma-pemrograma-paradigma-python.adoc[]
+include::{includedir}/01-02-persiapan-peranti-pengembangan.adoc[]
 
-include::{includedir}/01-03-persiapan-peranti-pengembangan.adoc[]
+include::{includedir}/01-03-algoritma-pemrograma-paradigma-python.adoc[]
 
 = Bagian II: Sintaksis Bahasa Pemrograman Python
 

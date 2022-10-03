@@ -1,0 +1,46 @@
+$ python
+Python 3.10.4 (main, Mar 31 2022, 08:41:55) [GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> help()
+
+Welcome to Python 3.10's help utility!
+
+If this is your first time using Python, you should definitely check out
+the tutorial on the internet at https://docs.python.org/3.10/tutorial/.
+
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To quit this help utility and
+return to the interpreter, just type "quit".
+
+To get a list of available modules, keywords, symbols, or topics, type
+"modules", "keywords", "symbols", or "topics".  Each module also comes
+with a one-line summary of what it does; to list the modules whose name
+or summary contain a given string such as "spam", type "modules spam".
+
+help> if
+
+The "if" statement
+******************
+
+The "if" statement is used for conditional execution:
+
+   if_stmt ::= "if" assignment_expression ":" suite
+               ("elif" assignment_expression ":" suite)*
+               ["else" ":" suite]
+
+It selects exactly one of the suites by evaluating the expressions one
+by one until one is found to be true (see section Boolean operations
+for the definition of true and false); then that suite is executed
+(and no other part of the "if" statement is executed or evaluated).
+If all expressions are false, the suite of the "else" clause, if
+present, is executed.
+
+Related help topics: TRUTHVALUE
+(END)
+
+help>
+You are now leaving help and returning to the Python interpreter.
+If you want to ask for help on a particular object directly from the
+interpreter, you can type "help(object)".  Executing "help('string')"
+has the same effect as typing a particular string at the help> prompt.
+>>>
