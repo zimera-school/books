@@ -185,17 +185,41 @@ sys.int_info(bits_per_digit=30, sizeof_digit=4)
 >>> 
 ----
 
+Bilangan _integer_ (bulat):
+
+[source,python]
+.src/02-02/numeric_int.py
+----
+include::../{sourcedir}/02-02/numeric_int.py[]
+----
+
+Bilangan pecahan (_floating point_):
+
+[source,python]
+.src/02-02/numeric_float.py
+----
+include::../{sourcedir}/02-02/numeric_float.py[]
+----
+
 Bilangan kompleks:
 
-[,python]
+[source,python]
+.src/02-02/numeric_complex.py
 ----
-x = 6
-y = 4
-  
-z = complex(x,y); 
-  
-print ("Bagian bilangan riil: ", z.real) 
-print ("Bagian imajiner dari: ", z.imag) 
+include::../{sourcedir}/02-02/numeric_complex.py[]
+----
+
+Python juga menggunakan notasi khusus untuk menandai basis dari suatu bilangan. Pada umumnya, terdapat beberapa basis bilang:
+
+1. Basis 2 (biner)
+2. Basis 8 (oktal)
+3. Basis 10 (desimal)
+4. Basis 16 (heksadesimal)
+
+[source,python]
+.src/02-02/numeric_base.py
+----
+include::../{sourcedir}/02-02/numeric_base.py[]
 ----
 
 ==== String
