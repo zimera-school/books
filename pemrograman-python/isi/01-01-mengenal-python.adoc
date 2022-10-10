@@ -1,4 +1,63 @@
-== Mengenal Python
+== Mengenal Bahasa Pemrograman dan Python
+
+=== Sistem Komputer dan Rangkaian Instruksi ke Komputer
+
+Suatu sistem komputer merupakan serangkaian peranti keras / _hardware / devices_ yang terintegrasi dan dikendalikan oleh peranti lunak / _software_ untuk melaksanakan proses komputasi tertentu. Peranti keras terdiri atas peranti untuk masukan, pemroses, serta keluaran. Secara umum, sistem komputer akan mengambil masukan, memproses masukan tersebut, kemudian menghasilkan sesuatu dari pemrosesan tersebut. Perhatikan misal saat orang akan menghasilkan dokumen tercetak menggunakan sistem komputer:
+
+* Masukan: dokumen yang akan dibuat dalam format tercetak, dimasukkan / ditulis menggunakan _keyboard_ pada sistem komputer.
+* Pemroses: _software_ yang dgunakan untuk memproses dokumen, misalnya LibreOffice Writer.
+* Keluaran: hasil ketikan tersebut kemudian dicetak ke peranti keluaran - _printer_ - menggunakan salah satu fasilitas dari LibreOffice.
+
+Untuk membuat supaya berbagai _hardware_ tersebut bisa mengerjakan sesuai dengan yang diinstruksikan, maka sistem komputer harus diprogram sesuai dengan tugas / _task_ yang dikehendaki. Hasil dari proses memprogram tersebut adalah _software_. _Software_ sering juga disebut dengan istilah _program_. 
+
+=== _Software_ 
+
+Suatu sistem komputer dikendalikan oleh _software_. Tanpa _software_, sistem komputer tidak akan lengkap dan tidak bisa melakukan aktivitas apapun. Ada beberapa kategori _software_:
+
+1. Sistem Operasi / Sistem Pengoperasi / _Operating System_. Merupakan _software_ paling mendasar yang mutlak harus dimiliki oleh sistem komputer. Tanpa sistem operasi, _software_ lainnya tidak akan bisa berjalan. Sistem operasi berfungsi untuk mengelola berbagai sumber daya komputasi dan menyediakan abstraksi serta perangkat dasar komputasi ke para pemakai. Sebagai contoh, supaya bisa menggunakan peranti printer, maka _software_ harus mengakses abstraksi yang dibuat oleh sistem operasi dalam bentuk API (_Applicaton Programming Interface_) untuk printer. _Software_ yang akan menggunakan printer tidak perlu mengakses _hardware_ secara langsung. Selain itu, sistem operasi juga menyediakan _software_ dasar untuk keperluan komputasi, misal Windows mempunyai Notepad untuk membuat suatu file teks, Linux mempunyai _shell_ untuk memberikan perintah ke sistem operasi, dan lain-lain. Contoh dari sistem operasi adalah Windows, Linux, FreeBSD, NetBSD, dan lain-lain.
+2. Peranti Pengembangan / _Development Tools_. _Software_ ini merupakan _software_ yang digunakan untuk membangun _software_ dan menjadi perhatian utama dari para pemrograman untuk menghasilkan _software_. Beberapa kategori peranti pengembangan ini antara lain adalah kompilator / _interpreter_ untuk bahasa pemrograman tersebut, _profiler_, _debugger_, IDE (_Integrated Development Environment_), dan lain-lain. Contoh peranti pengembangan: GNU C, LLVIM Clang, CPython, Rust Compiler, Go Compiler, GNU Debugger, Vim, Neovim, Emacs, Visual Studio, Visual Studio Code, dan lain-lain.
+3. _Software_ Aplikasi. _Software_ ini dibuat untuk tugas khusus yang diperlukan oleh _end user_, misalnya LibreOffice (untuk pekerjaan mengolah berbagai dokumen perkantoran), Adobe Photoshop (untuk membuat / mengedit / mengelola gambar), GIMP (untuk membuat / mengedit / mengelola gambar), OBS (untuk membuat video tutorial), dan lain-lain.
+4. _Software Utilitas_. _Software_ ini dibuat untuk keperluan meningkatkan kinerja sistem, baik di level sistem operasi maupun aplikasi. Contoh: Defragementer di Windows digunakan untuk melakukan pengurutan konten file fi media penyimpan sehingga isinya lebih cepat diakses, Partition Magic untuk mengelola partisi harddisk, Anti Virus, _shell utilities_ di Linux untuk berbagai keperluan administrasi sistem, dan lain-lain.
+
+=== Peranti Pengembangan
+
+Peranti pengembangan digunakan untuk membuat _software_ atau program, dengan menggunakan peranti ini, pemrogram memberikan instruksi yang harus dikerjakan oleh komputer. Untuk membuat _software_, seorang pemrogram harus menggunakan bahasa pemrograman tertentu, membuat kode sumber (instruksi dalam bahasa pemrograman tertentu), kemudian menjalankan kode sumber tersebut menggunakan kompilator / _interpreter_ bahasa pemrograman tersebut. Jika terdapat kesalahan, maka akan terjadi error dan eksekusi kode sumber tersebut gagal. Pemrogram kemudian mencari penyebab dari error tersebut dan kemudian akan membetulkan dan kemudian mengeksekusi / menjalankan lagi sampai mendapatkan hasil yang diinginkan. Demikian seterusnya kurang lebih aktivitas yang dilakukan oleh pemrogram. Secara umu, aktivitas tersebut kan digambarkan sebagai berikut:
+
+1.  Temukan masalah
+2.  Buat dan perbaiki algoritma
+3.  Implementasikan algoritma dalam bentuk kode sumber
+4.  Jalankan kode sumber menggunakan kompilator / _interpreter_.
+5.  Jika sudah sesuai, berhenti. Jika belum, kembali ke langkah 2.
+
+Untuk melakukan berbagai aktivitas tersebut, pemrogram memerlukan berbagai _software_. Secara minimum, pemrogram akan memerlukan:
+
+1.  Kompilator / _interpreter_ bahasa pemrograman
+2.  Editor untuk menuliska kode sumber
+
+Semakin kompleks masalah yang ingin dicari solusinya, semakin kompleks _software_ yang dibutuhkan. Beberapa tambahan tersebut diantaranya adalah sebagai berikut:
+
+1.  _Build tools_
+2.  _Profiler_
+3.  _Debugger_
+4.  _Libraries_
+5.  _Security Tools_
+6.  _CI (Continuous Integration) - CD (Continuous Delivery)_
+7.  _Interface Designer_
+8.  IDE (_Integrated Development Environment_)
+9.  _Database Tools_
+10. _Code coverage Tools_
+11. _Documentation Tools_
+12. _Revision Control Sofware_
+
+=== Bahasa Pemrograman: Spesifikasi dan Implementasi
+
+Suatu sistem bisa diberikan instruksi melalui bahasa pemrograman dan implementasi bahasa pemrograman. Untuk keperluan tersebut, bisa dibedakan antara bahasa pemrograman dengan implementasi bahasa pemrograman tersebut. Setiap bahasa pemrograman mempunyai spesifikasi sintaksis dan berdasarkan sintaksis tersebut dibuat _compiler / kompilator_ atau _interpreter_ yang akan menterjemahkan sintaksis bahasa pemrograman tersebut ke dalam bahasa yang dipahami oleh mesin sehingga bisa dijalankan / dieksekusi oleh sitem komputer tersebut. Contoh spesifikasi dan implementasi:
+
+1.  Java: spesifikasi ada di https://docs.oracle.com/javase/specs/, implementasi: Oracle JDK, Eclipse Temurin.
+2.  Python: spesifikasi ada di https://docs.python.org/dev/reference/index.html, implentasi: CPython, IronPython, Jython.
+3.  JavaScript: spesifikasi dibuat oleh tim di ECMAScript (https://www.ecma-international.org/technical-committees/tc39/), implementasi: Node.js, Bun, Deno
+
+Meskipun kebanyakan membedakan bahasa pemrograman dengan implementasi, ada juga beberapa yang menjadikan satu sehingga penyebutan bahasa pemrograman sekaligus sebagai penyebutan _kompilator / interpreter_ (kondisi ini biasanya untuk bahasa pemrograman yang masih dalam taraf perkembangan atau tidak dimaksudkan untuk diimplementasikan oleh berbagai vendor dengan menggunakan spesifikasi terbuka), sebagai contoh Zig (https://ziglang.org/), 
 
 === Apakah Python Itu?
 
