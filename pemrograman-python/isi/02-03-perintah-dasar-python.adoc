@@ -1,6 +1,40 @@
-== Pengendalian Alur Program
+== Perintah Dasar Python
 
-=== if 
+Suatu bahasa pemrograman mempunyai perintah serta fasilitas _builtin_ untuk merangkai instruksi supaya bisa digunakan untuk memecahkan masalah pemrograman. Bisa dikatakan bahwa kode sumber Python yang dibuat nantinya akan terdiri atas:
+
+1.  Data
+2.  Fasilitas pustaka _builtin_
+3.  Perintah-perintah Python
+4.  Fasilitas pustaka pihak ketiga (jika diperlukan).
+
+Data telah dibahas pada bab tentang "Dasar-dasar Python", khususnya tentang tipe data dasar. Tipe data yang lebih kompleks akan dibahas pada bab mendatang. Fasilitas pustaka _builtin_ maupun pihak ketiga juga akan dibahas pada bab berikutnya. Untuk pembuatan program sederhana / belum kompleks, diperlukan pemahaman tentan tipe data dasar dan perintah-perintah Python (serta beberapa pustaka _builtin_ dasar). Bagian ini akan membahas perinta-perintah Python.
+
+
+Perintah-perintah Python - sering disebut juga dengan _statement_ - terdiri atas perintah *sederhana* (_simple statement_) dan perintah *gabungan* (_compound statement_). 
+
+=== _Simple Statement_
+
+Perintah sederhana / _simple statement_ adalah perintah yang terdiri atas satu baris saja ataupun satu baris yang terdiri atas beberapa rangkaian perintiah kecil. Perintah untuk mengisi variabel adalah salah satu contoh dari perintah sederhana. Beberapa perintah lain:
+
+1.  Mengisi variabel
+2.  Ekspresi
+3.  Perintah _assert_
+4.  Perintah _pass_
+5.  Perintah _del_
+6.  Perintah _return_
+7.  Perintah _yield_
+8.  Perintah _raise_
+9.  Perintah _break_
+10. Perintah _continue_
+11. Perintah _import_
+12. Perintah _global_
+13. Perintah _nonlocal_
+
+=== _Compound Statement_
+
+Perintah gabungan / _compound statement_ adalah perintah yang berisi sekelompok perintah lainnya. 
+
+==== if 
 
 Python menyediakan if … elif … else serta variasinya untuk keperluan jika terjadi kondisi tertentu dalam aliran program dan diteruskan dengan suatu ekspresi tertentu. Bentuk dari pernyataan if ini adalah sebagai berikut:
 
@@ -28,7 +62,7 @@ else:
     print("Anda hanya bisa mengambil 12 SKS")
 ----
 
-=== while
+==== while
 
 Pernyataan while digunakan untuk menjalankan perintah ataupun ekspresi di dalam blok while selama kondisi masih bernilai True.
 
@@ -58,7 +92,7 @@ while True:
     nilai += 1
 ----
 
-=== for
+==== for
 
 Pernyataan for digunakan untuk melakukan iterasi sepanjang list / daftar maupun string.
 

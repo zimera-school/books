@@ -51,7 +51,7 @@ include::{includedir}/02-01-mulai-menggunakan-python.adoc[]
 
 include::{includedir}/02-02-dasar-dasar-python.adoc[]
 
-include::{includedir}/02-03-pengendalian-alur-program.adoc[]
+include::{includedir}/02-03-perintah-dasar-python.adoc[]
 
 include::{includedir}/02-04-fungsi.adoc[]
 
