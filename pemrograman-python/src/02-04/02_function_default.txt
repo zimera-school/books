@@ -1,0 +1,4 @@
+$ python 02_function_default.py
+String Zimera School mempunyai 13 karakter
+String Zimera School mempunyai 1 karakter a
+$

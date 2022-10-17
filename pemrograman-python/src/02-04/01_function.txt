@@ -1,0 +1,5 @@
+$ python function_01.py
+String Zimera Corporation mempunyai 18 karakter
+String Zimera School mempunyai 13 karakter
+String Zimera Systems mempunyai 14 karakter
+$

@@ -1,0 +1,11 @@
+$ python 03_function_args_kwargs.py
+1
+68
+55
+99
+a/b/c
+a-b-c
+{'product_id': 'P001', 'product_name': 'Laptop'}
+Nilai product_id = P001
+Nilai product_name = Laptop
+$

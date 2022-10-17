@@ -1,8 +1,8 @@
-== Fungsi
+== Fungsi / _Function_
 
 === Apakah Fungsi Itu?
 
-Fungsi (function) merupakan blok / unit dari program yang digunakan untuk mengerjakan suatu pekerjaan tertentu dan mengembalikan hasilnya ke pemanggil. Fungsi dimaksudkan utk membuat reusable code. Seringkali dalam memprogram, seorang pemrogram mengerjakan hal-hal yang kadang sama dan diulang berkali-kali. Untuk membuat supaya tidak perlu mengerjakan tugas yang berulang-ulang tersebut, kode program dimasukkan dalam fungsi. saat diperlukan, fungsi tersebut dipanggil.
+Fungsi (_function_) merupakan blok / unit dari program yang digunakan untuk mengerjakan suatu pekerjaan tertentu dan mengembalikan hasilnya ke pemanggil. Hasil yang dikembalikan bisa merupakan data maupun hasil eksekusi suatu _statement_ untuk mengerjakan _task_ tertentu. Fungsi dimaksudkan utk membuat _reusable code_. Seringkali dalam memprogram, seorang pemrogram mengerjakan hal-hal yang kadang sama dan diulang berkali-kali. Untuk membuat supaya tidak perlu mengerjakan tugas yang berulang-ulang tersebut, kode program dimasukkan dalam fungsi. saat diperlukan, fungsi tersebut dipanggil.
 
 === Membuat Fungsi
 
@@ -22,126 +22,90 @@ retvalnama = nama(arg1, arg2, ... , argN)
 
 Contoh:
 
-[,python]
+[source,python]
+.src/02-04/01_function.py[]
 ----
-# function.py
-def jumlah(arg1):
-    jml = 0
-    for a in arg1:
-        jml += 1
-    return jml
- 
-str_obj = "Wabi Teknologi Indonesia"
-jml_str = jumlah(str_obj)
- 
-print(f'String {str_obj} mempunyai ' + str(jml_str) + ' karakter')
+include::../{sourcedir}/02-04/01_function.py[]
+----
+<1> Mendefinisikan nama fungsi (**jumlah**) dan argumen dari fungsi.
+<2> Awal dari *statement* yang akan dikerjakan jika fungsi tersebut dipanggil. Sering juga disebut dengan istilah "body of function". 
+<3> Setelah diproses, nilai akan dikembalikan ke pemanggil menggunakan _return_.
+<4> Definisi variabel yang akan diproses oleh kode sumber.
+<5> Pemanggilan fungsi pertama.
+<6> Pemanggilan fungsi kedua. 
+<7> Pemanggilan fungsi ketiga, Dari tiga pemanggilan ini, kita bisa melihat _reusable code_, sekali didefinisikan, setelah itu tidak perlu menulis ulang lagi, tinggal dipanggil namanya beserta dengan argumen yang diperlukan.
+
+Hasilnya adalah sebagai berikut:
+
+[source,shell]
+----
+include::../{sourcedir}/02-04/01_function.txt[]
 ----
 
 === Fungsi Dengan Argumen Default
 
 Suatu fungsi bisa mempunyai argumen default dengan cara menetapkan nilainya secara langsung pada definisi fungsi. Jika saat pemanggilan fungsi tersebut tidak menyertakan argumen, maka argumen default tersebut yang digunakan.
 
-[,python]
+[source,python]
+.src/02-04/02_function_default.py[]
 ----
-# function_default.py
-#
-# menghitung jumlah karakter tertentu dalam string
-# jika the_char tidak ada, maka default menghitung 
-# jumlah semua karakter
- 
-def jumlah(the_str, the_char=None):
-    jml = 0
-    if the_char:
-        for a in the_str:
-            if a == the_char:
-                jml += 1
-    else:
-        for a in the_str:
-            jml += 1
-    return jml
- 
-str_obj = "Wabi Teknologi Indonesia"
- 
-jml_semua = jumlah(str_obj)
-print(f'String {str_obj} mempunyai ' + str(jml_semua) + ' karakter')
- 
-jml_a = jumlah(str_obj, 'a')
-print(f'String {str_obj} mempunyai ' + str(jml_a) + ' karakter a')
+include::../{sourcedir}/02-04/02_function_default.py[]
+----
+
+Hasilnya adalah sebagai berikut:
+
+[source,shell]
+----
+include::../{sourcedir}/02-04/02_function_default.txt[]
 ----
 
 === Fungsi Dengan Argumen Tidak Pasti
   
-Jika jumlah argumen tidak pasti, pemrogram bisa menggunakan \*args (untuk argumen tanpa key) dan \**kwargs (untuk argumen dengan key dan value).
+Jika jumlah argumen tidak pasti, pemrogram bisa menggunakan \*args (untuk argumen tanpa _key_) dan \**kwargs (untuk argumen dengan _key_ dan _value_).
 
-[,python]
+[source,python]
+.src/02-04/03_function_args_kwrgs.py[]
 ----
-# function_args_kwargs.py
- 
-def penambah(*args):
-    total = 0
-    for op in args:
-        total += op
-    return total
- 
-jml1 = penambah(1)
-jml2 = penambah(23, 24, 21)
-jml3 = penambah(1,2,3,4,5,6,7,8,9,10)
- 
-print(jml1)
-print(jml2)
-print(jml3)
- 
-def gabungkan(*args, pemisah='/'):
-    return pemisah.join(args)
- 
-str_gabung = gabungkan('a','b','c')
-str_gabung2 = gabungkan('a','b','c', pemisah='-')
- 
-print(str_gabung)
-print(str_gabung2)
- 
-def get_kwargs(**kwargs):
-    return kwargs
- 
-def get_key_value(**kwargs):
-    for key, value in kwargs.items():
-        print("Nilai {} = {}".format(key, value))
- 
-kw1 = get_kwargs(product_id='P001', product_name='Laptop')
-print(kw1)
-get_key_value(product_id='P001', product_name='Laptop')
+include::../{sourcedir}/02-04/03_function_args_kwargs.py[]
 ----
+
+Hasilnya adalah sebagai berikut:
+
+[source,shell]
+----
+include::../{sourcedir}/02-04/03_function_args_kwargs.txt[]
+----
+
+Dengan adanya jumlah argumen tidak pasti serta penggunaan \*arg dan *kwargs, maka urutan definisi argumen dalam suatu deklarasi fungsi menjadi penting. Urutan deklarasi argumen suatu fungsi yang benar adalah sebagai berikut:
+
+1.  Argumen standar
+2.  \*args
+3.  \*kwargs
 
 === Ekspresi / Operator / Fungsi Lambda
 
 Fungsi lambda merupakan fungsi kecil dan tanpa nama. Penggunaannya mirip dengan fungsi biasa, tetapi meski bisa menggunakan banyak argumen, fungsi lambda hanya terdiri atas 1 ekspresi yang dieksekusi dan langsung dikembalikan nilainya ke pemanggilnya. Penggunaan dari fungsi lambda ini antara lain untuk:
 
-* Higher order function (lihat materi Functional Programming) atau fungsi yang mempunyai argumen berupa fungsi, 
+* _Higher order function_ (lihat materi Functional Programming) atau fungsi yang mempunyai argumen berupa fungsi, 
 * Digunakan bersama struktur data di Python (misalnya untuk map dan filter di list).
 * Digunakan untuk membuat fungsi secara cepat dan dalam waktu pendek saja.
 
-[,python]
+[source,python]
+.src/02-04/04_lambda.py[]
 ----
-# lambda1.py
- 
-# definisi: 
-# lambda arg1, arg2, ... , argN: ekspresi
- 
-multiple = lambda x, y: x * y
- 
-print(multiple(10,20))
- 
-def kali_berapa(n):
-    return lambda a: a * n
- 
-kali_dua = kali_berapa(2)
- 
-print(kali_dua(90))
+include::../{sourcedir}/02-04/04_lambda.py[]
 ----
 
-=== \__main__ 
+Hasilnya adalah sebagai berikut:
 
-Saat script Python dipanggil / dieksekusi / dijalankan, variabel \__name__ akan berisi nama modul. Jika file tersebut merupakan program utama (bukan modul), maka \__name__ akan berisi \__main__. Pada Python versi 2, hal ini bisa dideteksi dengan menggunakan baris:
+[source,shell]
+----
+include::../{sourcedir}/02-04/04_lambda.txt[]
+----
+
+=== \__main\__ 
+
+Saat script Python dipanggil / dieksekusi / dijalankan, variabel \__name\__ akan berisi nama modul. Jika file tersebut merupakan program utama (bukan modul), maka \__name\__ akan berisi \__main\__. Pada Python versi 2, hal ini bisa dideteksi dengan menggunakan baris:
 
 [,python]
 ----
@@ -150,25 +114,15 @@ if __name__ == "__main__":
 
 Pada Python 3, langung memanggil *main()*.
 
-[,python]
+[source,python]
+.src/02-04/05_main.py[]
 ----
-def jumlah(arg1):
-    jml = 0
-    for a in arg1:
-        jml += 1
-    return jml
+include::../{sourcedir}/02-04/05_main.py[]
+----
 
-def main():
-    str_obj = "Wabi Teknologi Indonesia"
-    jml_str = jumlah(str_obj)
+Hasilnya adalah sebagai berikut:
 
-    print(f'String {str_obj} mempunyai ' + str(jml_str) + ' karakter')
-
-#if __name__== "__main__":
-#    main()
-
-# Menggunakan Python 3 lebih singkat:
-# langsung panggil main()
-
-main()
+[source,shell]
+----
+include::../{sourcedir}/02-04/05_main.txt[]
 ----
