@@ -1,5 +1,3 @@
-# 02+function_default.py
-#
 # menghitung jumlah karakter tertentu dalam string
 # jika the_char tidak ada, maka default menghitung 
 # jumlah semua karakter

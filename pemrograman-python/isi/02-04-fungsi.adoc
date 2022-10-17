@@ -8,7 +8,7 @@ Fungsi (_function_) merupakan blok / unit dari program yang digunakan untuk meng
 
 Rerangka fungsi di Python adalah sebagai berikut:
 
-[,python] 
+[source,python] 
 ----
 def nama(arg1, arg2, ... , argN):
 	... 
@@ -23,11 +23,11 @@ retvalnama = nama(arg1, arg2, ... , argN)
 Contoh:
 
 [source,python]
-.src/02-04/01_function.py[]
+.src/02-04/01_function.py
 ----
 include::../{sourcedir}/02-04/01_function.py[]
 ----
-<1> Mendefinisikan nama fungsi (**jumlah**) dan argumen dari fungsi.
+<1> Mendefinisikan nama fungsi (*jumlah*) dan argumen dari fungsi.
 <2> Awal dari *statement* yang akan dikerjakan jika fungsi tersebut dipanggil. Sering juga disebut dengan istilah "body of function". 
 <3> Setelah diproses, nilai akan dikembalikan ke pemanggil menggunakan _return_.
 <4> Definisi variabel yang akan diproses oleh kode sumber.
@@ -47,7 +47,7 @@ include::../{sourcedir}/02-04/01_function.txt[]
 Suatu fungsi bisa mempunyai argumen default dengan cara menetapkan nilainya secara langsung pada definisi fungsi. Jika saat pemanggilan fungsi tersebut tidak menyertakan argumen, maka argumen default tersebut yang digunakan.
 
 [source,python]
-.src/02-04/02_function_default.py[]
+.src/02-04/02_function_default.py
 ----
 include::../{sourcedir}/02-04/02_function_default.py[]
 ----
@@ -61,10 +61,10 @@ include::../{sourcedir}/02-04/02_function_default.txt[]
 
 === Fungsi Dengan Argumen Tidak Pasti
   
-Jika jumlah argumen tidak pasti, pemrogram bisa menggunakan \*args (untuk argumen tanpa _key_) dan \**kwargs (untuk argumen dengan _key_ dan _value_).
+Jika jumlah argumen tidak pasti, pemrogram bisa menggunakan *args (untuk argumen tanpa _key_) dan **kwargs (untuk argumen dengan _key_ dan _value_).
 
 [source,python]
-.src/02-04/03_function_args_kwrgs.py[]
+.src/02-04/03_function_args_kwrgs.py
 ----
 include::../{sourcedir}/02-04/03_function_args_kwargs.py[]
 ----
@@ -76,11 +76,11 @@ Hasilnya adalah sebagai berikut:
 include::../{sourcedir}/02-04/03_function_args_kwargs.txt[]
 ----
 
-Dengan adanya jumlah argumen tidak pasti serta penggunaan \*arg dan *kwargs, maka urutan definisi argumen dalam suatu deklarasi fungsi menjadi penting. Urutan deklarasi argumen suatu fungsi yang benar adalah sebagai berikut:
+Dengan adanya jumlah argumen tidak pasti serta penggunaan *args dan **kwargs, maka urutan definisi argumen dalam suatu deklarasi fungsi menjadi penting. Urutan deklarasi argumen suatu fungsi yang benar adalah sebagai berikut:
 
 1.  Argumen standar
-2.  \*args
-3.  \*kwargs
+2.  *args
+3.  **kwargs
 
 === Ekspresi / Operator / Fungsi Lambda
 
@@ -91,7 +91,7 @@ Fungsi lambda merupakan fungsi kecil dan tanpa nama. Penggunaannya mirip dengan 
 * Digunakan untuk membuat fungsi secara cepat dan dalam waktu pendek saja.
 
 [source,python]
-.src/02-04/04_lambda.py[]
+.src/02-04/04_lambda.py
 ----
 include::../{sourcedir}/02-04/04_lambda.py[]
 ----
@@ -103,9 +103,9 @@ Hasilnya adalah sebagai berikut:
 include::../{sourcedir}/02-04/04_lambda.txt[]
 ----
 
-=== \__main\__ 
+=== +__main__+ 
 
-Saat script Python dipanggil / dieksekusi / dijalankan, variabel \__name\__ akan berisi nama modul. Jika file tersebut merupakan program utama (bukan modul), maka \__name\__ akan berisi \__main\__. Pada Python versi 2, hal ini bisa dideteksi dengan menggunakan baris:
+Saat script Python dipanggil / dieksekusi / dijalankan, variabel +__name__+ akan berisi nama modul. Jika file tersebut merupakan program utama (bukan modul), maka +__name__+ akan berisi +__main__+. Pada Python versi 2, hal ini bisa dideteksi dengan menggunakan baris:
 
 [,python]
 ----
@@ -115,7 +115,7 @@ if __name__ == "__main__":
 Pada Python 3, langung memanggil *main()*.
 
 [source,python]
-.src/02-04/05_main.py[]
+.src/02-04/05_main.py
 ----
 include::../{sourcedir}/02-04/05_main.py[]
 ----
