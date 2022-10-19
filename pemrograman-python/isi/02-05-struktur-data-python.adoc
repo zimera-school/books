@@ -1,79 +1,25 @@
 == Struktur Data di Python
 
-Struktur data merupakan pengorganisasian, pengelolaan, serta penyimpanan data untuk akses data yang efisien. Python mempunyai beberapa model data.
+Struktur data merupakan pengorganisasian, pengelolaan, serta penyimpanan data untuk akses data yang efisien. Python mempunyai beberapa model data. Pembahasan mengenai struktur data merupakan pembahasan lebih lanjut lagi setelah tipe data dasar. Pada tipe data dasar, kita sudah mengetahui bahwa ada beberapa tipe data bawaan (sering disebut dengan *primitive*) dan paling mendasar. Tipe data dasar tersebut biasanya memang hanya digunakan untuk keperluan yang sederhana dan sifatnya individual. 
+
+Tipe data primitif tersebut kemudian bisa digunakan untuk mengkonstruksi tipe data yang lebih kompleks. Secara umum, tipe data yang dibentuk dari konstruksi tipe data primitif tersebut dikenal dengan istilah _struktur data_ atau tipe data _agregat_. Istilah lain yang juga cukup sering digunakan adalah _composite data type_ atau _compound data type_. Saat pemrograman melakukan proses untuk mengkonstruksi _composite data type_, maka dikatakan bahwa pemrogram melakukan _composition_ / komposisi.
 
 === List
 
 List digunakan untuk menyimpan data (biasanya) dari tipe yang sama (meski tidak selalu harus sama) dalam suatu rangkaian data yang dipisahkan oleh koma dalam kurung kotak.
 
-[,python]
+[source,python]
+.src/02-05/01_list_01.py
 ----
-# list.py
- 
-daftar_makanan = ['soto', 'bakso', 'pecel', 'nila bakar']
- 
-print(daftar_makanan)
-# hasil: ['soto', 'bakso', 'pecel', 'nila bakar']
- 
-print()
-for makanan in daftar_makanan:
-    print(makanan)
-    # hasil:
-    #   soto
-    #   bakso
-    #   pecel
-    #   nila bakar
- 
-print()
-print(daftar_makanan[0])
-# soto
- 
-print()
-print(daftar_makanan[-1])
-# nila bakar
- 
-print()
-print(daftar_makanan[-3])
-# bakso
- 
-print()
-print(daftar_makanan[-2:])
-# hasil: ['pecel', 'nila bakar']
- 
-print()
-print(daftar_makanan[:])
-# hasil: ['soto', 'bakso', 'pecel', 'nila bakar']
- 
-daftar2 = daftar_makanan + ['oseng tempe', 'sayur pisang']
-print()
-print(daftar2)
-# hasil: ['soto', 'bakso', 'pecel', 'nila bakar', 'oseng tempe', 'sayur pisang']
-jml_makanan = len(daftar2)
-print(f'ada {jml_makanan} jumlah makanan')
- 
-# list bersifat mutable
-daftar2[1] = 'mie ayam'
-print()
-print(daftar2)
-# hasil: ['soto', 'mie ayam', 'pecel', 'nila bakar', 'oseng tempe', 'sayur pisang']
- 
-# index 2 diganti sampai sebelum index 4
-daftar2[2:4] = ['pecel lele','nila goreng']
-print()
-print(daftar2)
-# hasil: ['soto', 'mie ayam', 'pecel lele', 'nila goreng', 'oseng tempe', 'sayur pisang']
- 
-# list bisa berada di dalam list
-daftar2[1] = ['mie ayam biasa', 'mie ayam bakso', 'mie ayam istimewa']
-print()
-print(daftar2)
-# hasil: ['soto', ['mie ayam biasa', 'mie ayam bakso', 'mie ayam istimewa'], 
-#       'pecel lele', 'nila goreng', 'oseng tempe', 'sayur pisang']
-print(daftar2[1])
-# hasil: ['mie ayam biasa', 'mie ayam bakso', 'mie ayam istimewa']
-print(daftar2[1][2])
-# hasil: mie ayam istimewa
----- 
+include::../{sourcedir}/02-05/01_list.py[]
+----
+
+Hasilnya adalah sebagai berikut:
+
+[source,shell]
+----
+include::../{sourcedir}/02-05/01_list.txt[]
+----
 
 Python menyediakan banyak fungsi untuk memanipulasi list, silahkan melihat selengkapnya dengan perintah help(list) dari prompt Python
 

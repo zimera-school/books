@@ -1,0 +1,27 @@
+['soto', 'bakso', 'pecel', 'nila bakar']
+
+soto
+bakso
+pecel
+nila bakar
+
+soto
+
+nila bakar
+
+bakso
+
+['pecel', 'nila bakar']
+
+['soto', 'bakso', 'pecel', 'nila bakar']
+
+['soto', 'bakso', 'pecel', 'nila bakar', 'oseng tempe', 'sayur pisang']
+ada 6 jumlah makanan
+
+['soto', 'mie ayam', 'pecel', 'nila bakar', 'oseng tempe', 'sayur pisang']
+
+['soto', 'mie ayam', 'pecel lele', 'nila goreng', 'oseng tempe', 'sayur pisang']
+
+['soto', ['mie ayam biasa', 'mie ayam bakso', 'mie ayam istimewa'], 'pecel lele', 'nila goreng', 'oseng tempe', 'sayur pisang']
+['mie ayam biasa', 'mie ayam bakso', 'mie ayam istimewa']
+mie ayam istimewa
