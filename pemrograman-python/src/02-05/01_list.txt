@@ -1,3 +1,4 @@
+$ python 01_list.py
 ['soto', 'bakso', 'pecel', 'nila bakar']
 
 soto
@@ -25,3 +26,4 @@ ada 6 jumlah makanan
 ['soto', ['mie ayam biasa', 'mie ayam bakso', 'mie ayam istimewa'], 'pecel lele', 'nila goreng', 'oseng tempe', 'sayur pisang']
 ['mie ayam biasa', 'mie ayam bakso', 'mie ayam istimewa']
 mie ayam istimewa
+$

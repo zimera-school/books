@@ -1,0 +1,10 @@
+$ python 03_tuple.py
+(234, 'data 1', 'data 2', 343)
+data 2
+('data x', 'data y', (123, 321))
+321
+data x
+data y
+(123, 321)
+(435,)
+$

@@ -9,7 +9,7 @@ Tipe data primitif tersebut kemudian bisa digunakan untuk mengkonstruksi tipe da
 List digunakan untuk menyimpan data (biasanya) dari tipe yang sama (meski tidak selalu harus sama) dalam suatu rangkaian data yang dipisahkan oleh koma dalam kurung kotak.
 
 [source,python]
-.src/02-05/01_list_01.py
+.src/02-05/01_list.py
 ----
 include::../{sourcedir}/02-05/01_list.py[]
 ----
@@ -21,108 +21,74 @@ Hasilnya adalah sebagai berikut:
 include::../{sourcedir}/02-05/01_list.txt[]
 ----
 
-Python menyediakan banyak fungsi untuk memanipulasi list, silahkan melihat selengkapnya dengan perintah help(list) dari prompt Python
+Python menyediakan banyak fungsi untuk memanipulasi list, silahkan melihat selengkapnya dengan perintah help(list) dari prompt Python. Berikut adalah contoh kode sumber yang berisi berbagai fungsi / _method_ untuk memanipulasi list:
+
+[source,python]
+.src/02-05/02_list.py
+----
+include::../{sourcedir}/02-05/02_list.py[]
+----
+
+Hasilnya adalah sebagai berikut:
+
+[source,shell]
+----
+include::../{sourcedir}/02-05/02_list.txt[]
+----
 
 === Tuple
 	
 Tuple mirip dengan list, tetapi beda kurung dan bersifat immutable (tidak bisa diubah).
 
-[,python]
+[source,python]
+.src/02-05/03_tuple.py
 ----
-# tuple.py
- 
-the_data = 234, 'data 1', 'data 2', 343
-print(the_data)
-# hasil: (234, 'data 1', 'data 2', 343)
- 
-print(the_data[2])
-# hasil: data2
- 
-# the_data[2] = 'change this'
-# error: TypeError: 'tuple' object does not support item assignment
- 
-data2 = 'data x', 'data y', (123, 321)
-print(data2)
-# hasil: ('data x', 'data y', (123, 321))
-print(data2[2][1])
-# hasil: 321
-for a in data2:
-    print(a)
-# hasil:
-#   data x
-#   data y
-#   (123, 321)
- 
-# membuat tuple yang hanya berisi 1:
-data3 = 435,
-print(data3)
-# hasil: (435,)
+include::../{sourcedir}/02-05/03_tuple.py[]
 ----
 
-Lihat juga help(tuple).
+Hasilnya adalah sebagai berikut:
+
+[source,shell]
+----
+include::../{sourcedir}/02-05/03_tuple.txt[]
+----
+
+Untuk mengetahui fungsi serta _method_ untuk tuple, lihat juga *help(tuple)* dari REPL.
 
 === Sets
 
 Sets merupakan struktur data untuk koleksi yang tidak terurut tetapi tidak membolehkan lebih dari satu nilai yang sama dalam setiap koleksi tersebut.
 
-[,python]
+[source,python]
+.src/02-05/04_set.py
 ----
-# set.py
- 
-proglang = {'Rust', 'Python', 'Go', 'Rust'}
-print(proglang)
-tambahan = ('Ruby', 'Lua')
-proglang.add(tambahan)
-print(proglang)
-print('Rust' in proglang)
- 
-huruf = set('Wabi Teknologi')
-print(huruf)
- 
-huruf2 = set()
-print(huruf2)
-huruf2.add('Wabi Teknologi')
-print(huruf2)
- 
-kata1 = set('indonesia')
-kata2 = set('merdeka')
-print(kata1)
-print(kata2)
- 
-# ada di kata1, tidak ada di kata2
-print(kata1 - kata2)
- 
-# ada di kata1 atau di kata2 atau di keduanya
-print(kata1 | kata2)
- 
-# ada di kata1 dan kata2
-print(kata1 & kata2)
- 
-# ada di kata1 atau di kata2 tapi tidak di keduanya
-print(kata1 ^ kata2)
----- 
+include::../{sourcedir}/02-05/04_set.py[]
+----
 
-Lihat juga help(set).
+Hasilnya adalah sebagai berikut:
+
+[source,shell]
+----
+include::../{sourcedir}/02-05/04_set.txt[]
+----
+
+Lihat juga *help(set)* dari REPL.
 
 === Dictionary
 
 Struktur data ini mengorganisasikan data dalam bentuk seperti kamus: ada key dan value untuk key tersebut. 
 
-[,python]
+[source,python]
+.src/02-05/05_dict.py
 ----
-# dict.py
- 
-rumah = {'H-304': 'Bambang Purnomosidi', 'H-303': 'Anton'}
-print(rumah)
-print(rumah.items())
-print(rumah['H-304'])
-for k, v in rumah.items():
-    print(f'Rumah nomor {k} adalah tempat tinggal keluarga {v}')
- 
-print('H-304' in rumah)
-print('H-305' in rumah)
-print('H-304' not in rumah)
-print(sorted(rumah))
+include::../{sourcedir}/02-05/05_dict.py[]
 ----
 
-Lihat juga help(dict)
+Hasilnya adalah sebagai berikut:
+
+[source,shell]
+----
+include::../{sourcedir}/02-05/05_dict.txt[]
+----
+
+Lihat juga *help(dict)* dari REPL

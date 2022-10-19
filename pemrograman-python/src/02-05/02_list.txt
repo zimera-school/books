@@ -1,0 +1,26 @@
+$ python 02_list.py
+[0, 'satu', 2, 'tiga', 4]
+[0, 'satu', 2, 'tiga', 4, 'lima']
+[0, 'satu', 2, 'tiga', 4, 'lima', 6, 'tujuh', 8]
+[0, 'satu', 2, 'tiga', 'nomor empat', 4, 'lima', 6, 'tujuh', 8]
+[0, 'satu', 2, 'tiga', 4, 'lima', 6, 'tujuh', 8]
+[0, 'satu', 2, 'tiga', 4, 'lima', 6, 'tujuh', 8]
+8
+[0, 'satu', 2, 'tiga', 4, 'lima', 6, 'tujuh']
+2
+[0, 'satu', 'tiga', 4, 'lima', 6, 'tujuh']
+[]
+[0, 'satu', 2, 'tiga', 4, 'lima', 6, 'tujuh', 8]
+7
+4
+[0, 'satu', 2, 'tiga', 4, 'lima', 6, 'tujuh', 8, 4]
+2
+[4, 8, 'tujuh', 6, 'lima', 4, 'tiga', 2, 'satu', 0]
+[4, 8, 'tujuh', 6, 'lima', 4, 'tiga', 2, 'satu', 0]
+[4, 8, 'tujuh', 6, 'lima', 4, 'tiga', 2, 'satu', 0]
+[]
+[]
+[4, 8, 'tujuh', 6, 'lima', 4, 'tiga', 2, 'satu', 0]
+[4, 8, 'tujuh', 6, 'lima', 4, 'tiga', 2, 'satu', 0]
+[4, 8, 'tujuh', 6, 'lima', 2, 'satu', 0]
+$

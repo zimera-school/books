@@ -1,0 +1,11 @@
+$
+{'H-304': 'Bambang Purnomosidi', 'H-303': 'Zaky Aditya'}
+dict_items([('H-304', 'Bambang Purnomosidi'), ('H-303', 'Zaky Aditya')])
+Bambang Purnomosidi
+Rumah nomor H-304 adalah tempat tinggal keluarga Bambang Purnomosidi
+Rumah nomor H-303 adalah tempat tinggal keluarga Zaky Aditya
+True
+False
+False
+['H-303', 'H-304']
+$
