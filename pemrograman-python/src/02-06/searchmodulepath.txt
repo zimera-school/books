@@ -1,0 +1,9 @@
+$ echo $PYTHONPATH
+
+$ python
+Python 3.10.6 (main, Oct 24 2022, 16:07:47) [GCC 11.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> print(sys.path)
+['', '/home/bpdp/software/python-dev-tools/miniconda39/envs/py310-utdi/lib/python310.zip', '/home/bpdp/software/python-dev-tools/miniconda39/envs/py310-utdi/lib/python3.10', '/home/bpdp/software/python-dev-tools/miniconda39/envs/py310-utdi/lib/python3.10/lib-dynload', '/home/bpdp/software/python-dev-tools/miniconda39/envs/py310-utdi/lib/python3.10/site-packages']
+>>> 

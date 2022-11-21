@@ -1,0 +1,5 @@
+conda list # <1>
+conda install # <2>
+conda remove # <3>
+conda update # <4>
+conda update --all # <5>

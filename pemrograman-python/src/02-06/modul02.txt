@@ -1,0 +1,3 @@
+$ python modul02.py 
+87
+$

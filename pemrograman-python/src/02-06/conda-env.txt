@@ -1,0 +1,4 @@
+conda create -n py311-utdi python=3.11 # <1>
+conda env list # <2>
+conda activate nama-env # <3>
+conda create -p /home/bpdp/py36 python=3.6 # <4>

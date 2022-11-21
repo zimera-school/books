@@ -1,0 +1,4 @@
+>>> import modul02
+>>> modul02.penambah(12,23,12,23)
+70
+>>> 

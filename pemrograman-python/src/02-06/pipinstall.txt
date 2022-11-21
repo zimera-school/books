@@ -1,0 +1,45 @@
+$ pip install jupyterlab
+Collecting jupyterlab
+  Downloading jupyterlab-3.5.0-py3-none-any.whl (8.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 4.4 MB/s eta 0:00:00
+Collecting jinja2>=2.1
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting jupyter-server<3,>=1.16.0
+  Downloading jupyter_server-1.23.2-py3-none-any.whl (346 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.4/346.4 kB 1.9 MB/s eta 0:00:00
+Collecting jupyter-core
+  Downloading jupyter_core-5.0.0-py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.1/91.1 kB 710.6 kB/s eta 0:00:00
+Collecting packaging
+  Using cached packaging-21.3-py3-none-any.whl (40 kB)
+Collecting ipython
+  Downloading ipython-8.6.0-py3-none-any.whl (761 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 761.1/761.1 kB 3.2 MB/s eta 0:00:00
+...
+...
+...
+Collecting psutil
+  Downloading psutil-5.9.4-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (280 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 280.2/280.2 kB 270.9 kB/s eta 0:00:00
+Requirement already satisfied: certifi>=2017.4.17 in /home/bpdp/software/python-dev-tools/miniconda39/envs/py310-utdi/lib/python3.10/site-packages (from requests->jupyterlab-server~=2.10->jupyterlab) (2022.9.24)
+Collecting urllib3<1.27,>=1.21.1
+  Using cached urllib3-1.26.12-py2.py3-none-any.whl (140 kB)
+Requirement already satisfied: charset-normalizer<3,>=2 in /home/bpdp/software/python-dev-tools/miniconda39/envs/py310-utdi/lib/python3.10/site-packages (from requests->jupyterlab-server~=2.10->jupyterlab) (2.0.4)
+Collecting pure-eval
+  Using cached pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Collecting asttokens>=2.1.0
+  Downloading asttokens-2.1.0-py2.py3-none-any.whl (26 kB)
+Collecting executing>=1.2.0
+  Downloading executing-1.2.0-py2.py3-none-any.whl (24 kB)
+Requirement already satisfied: six in /home/bpdp/software/python-dev-tools/miniconda39/envs/py310-utdi/lib/python3.10/site-packages (from asttokens>=2.1.0->stack-data->ipython->jupyterlab) (1.16.0)
+Collecting cffi>=1.0.1
+  Using cached cffi-1.15.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (441 kB)
+Collecting soupsieve>1.2
+  Using cached soupsieve-2.3.2.post1-py3-none-any.whl (37 kB)
+Collecting webencodings
+  Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Collecting pycparser
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Installing collected packages: webencodings, wcwidth, Send2Trash, pytz, pure-eval, ptyprocess, pickleshare, mistune, json5, ipython-genutils, fastjsonschema, executing, backcall, websocket-client, urllib3, traitlets, tornado, tomli, tinycss2, soupsieve, pyzmq, python-dateutil, pyrsistent, pyparsing, pygments, pycparser, psutil, prompt-toolkit, prometheus-client, platformdirs, pexpect, parso, pandocfilters, nest-asyncio, MarkupSafe, jupyterlab-pygments, entrypoints, defusedxml, decorator, debugpy, bleach, babel, asttokens, terminado, stack-data, requests, packaging, matplotlib-inline, jupyter-core, jsonschema, jinja2, jedi, cffi, beautifulsoup4, nbformat, jupyter-client, ipython, argon2-cffi-bindings, nbclient, ipykernel, argon2-cffi, nbconvert, jupyter-server, notebook-shim, jupyterlab-server, nbclassic, notebook, jupyterlab
+Successfully installed MarkupSafe-2.1.1 Send2Trash-1.8.0 argon2-cffi-21.3.0 argon2-cffi-bindings-21.2.0 asttokens-2.1.0 babel-2.11.0 backcall-0.2.0 beautifulsoup4-4.11.1 bleach-5.0.1 cffi-1.15.1 debugpy-1.6.3 decorator-5.1.1 defusedxml-0.7.1 entrypoints-0.4 executing-1.2.0 fastjsonschema-2.16.2 ipykernel-6.17.1 ipython-8.6.0 ipython-genutils-0.2.0 jedi-0.18.1 jinja2-3.1.2 json5-0.9.10 jsonschema-4.17.0 jupyter-client-7.4.7 jupyter-core-5.0.0 jupyter-server-1.23.2 jupyterlab-3.5.0 jupyterlab-pygments-0.2.2 jupyterlab-server-2.16.3 matplotlib-inline-0.1.6 mistune-2.0.4 nbclassic-0.4.8 nbclient-0.7.0 nbconvert-7.2.5 nbformat-5.7.0 nest-asyncio-1.5.6 notebook-6.5.2 notebook-shim-0.2.2 packaging-21.3 pandocfilters-1.5.0 parso-0.8.3 pexpect-4.8.0 pickleshare-0.7.5 platformdirs-2.5.4 prometheus-client-0.15.0 prompt-toolkit-3.0.32 psutil-5.9.4 ptyprocess-0.7.0 pure-eval-0.2.2 pycparser-2.21 pygments-2.13.0 pyparsing-3.0.9 pyrsistent-0.19.2 python-dateutil-2.8.2 pytz-2022.6 pyzmq-24.0.1 requests-2.28.1 soupsieve-2.3.2.post1 stack-data-0.6.1 terminado-0.17.0 tinycss2-1.2.1 tomli-2.0.1 tornado-6.2 traitlets-5.5.0 urllib3-1.26.12 wcwidth-0.2.5 webencodings-0.5.1 websocket-client-1.4.2
+$

@@ -1,0 +1,6 @@
+$ python 01-modul-standar.py
+posix
+Linux
+5.18.0-4-amd64
+/home/bpdp/kerjaan/git-repos/oldstager/current/github/zimera-school/books/pemrograman-python/src/02-06
+$
