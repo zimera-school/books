@@ -1,0 +1,30 @@
+$ python open_file_with.py
+5
+3
+10
+21
+33
+6
+7
+
+True
+5
+3
+10
+21
+33
+6
+7
+
+sekarang hanya berisi 1 baris: tambahan
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+$

@@ -1,65 +1,78 @@
 == Operasi I/O
 
+Istilah Operasi I/O (sering juga disebut *input/output*, *IO*, dan *io*) adalah operasi masukan dan keluaran yang dilakukan terhadap peranti pemrosesan. Sebagai contoh, peranti pemrosesan bisa mendapatkan masukan data dari basis data, dari _keyboard_, atau bisa juga mendapatkan masukan data dari suatu file .txt, .csv, .json, dan lain-lain. Keluaran bisa saja ke layar, atau ke media pencetak (_printer_), atau suara, dan lain-lain. Semua bahasa pemrograman mempunyai fasilitas untuk operasi I/O, setidaknya untuk hal-hal yang cukup umum (masukan dari _keyboard_, file .txt, serta keluaran ke layar, _printer_, dan lain-lain). Jika tidak ada fasilitas, maka biasanya diperlukan *driver* untuk keperluan membaca masukan (contoh: membaca data dari basis data PostgreSQL di Python memerlukan driver *psycopg*).
+
 === Input dari Keyboard
 
-Untuk menerima input dari keyboard, digunakan input
+Untuk menerima input dari keyboard, digunakan *input*.
 
-[,python]
+[source,python]
+.src/02-07/input_keyboard.py
 ----
-# input_keyboard.py
- 
-nama = input('Masukkan nama = ')
-usia = int(input('Umur = '))
- 
-print(f'Nama = {nama}, usia = {usia}')
-print('Nama = {0:^}, usia = {1:4d}'.format(nama, usia))
+include::../{sourcedir}/02-07/input_keyboard.py[]
+----
+
+Hasil:
+
+[source,shell]
+----
+include::../{sourcedir}/02-07/input_keyboard.txt[]
 ----
 
 === Output ke Layar
 
 Untuk menampilkan output, digunakan f di awal string atau menggunakan format seperti pada contoh di atas.
 
-=== Mengambil Isi File
+=== Operasi File
 
-Untuk mengambil isi file, buka menggunakan open kemudian gunakan read untuk membaca isi. Mode pada open disesuaikan dengan tujuan pembukaan file. Menulis ke file dilakukan dengan write().
+Secara umum, operasi file dilakukan dengan membuka file dan kemudian melakukan proses sesuai dengan algoritma yang dikehendaki. Setiap file yang dibuka harus dibuka dengan mode tertentu supaya sesuai dengan tujuan pembukaan file (misalnya hanya untuk dibaca saja, atau bisa ditulisi, dan lain-lain). Secara lengkap, ada beberapa mode pembukaan file:
 
-[,python]
+[cols="1,1"]
+|===
+| Mode | Arti
+
+| r
+| Dibuka untuk dibaca (default)
+
+| w
+| Dibuka untuk ditulisi (jika sudah ada, dihapus dulu), jika belum ada, dibuat.
+
+| x
+| Dibuka untuk dibuat baru, jika sudah ada maka gagal.
+
+| a
+| Dibuka untuk ditambahi isinya. Jika belum ada, dibuat.
+
+| t
+| Dibuka sebagai file mode teks.
+
+| b
+| Dibuka sebagai file mode biner.
+
+| +
+| Dibuka untuk ditulisi dan dibaca.
+|===
+
+
+Untuk mengambil isi file, buka menggunakan open kemudian gunakan read untuk membaca isi. Mode pada open disesuaikan dengan tujuan pembukaan file. Menulis ke file dilakukan dengan write(). Perhatikan contoh berikut (file `angka.txt` diperlukan):
+
+[source,shell]
+.src/02-07/angka.txt
 ----
-# open_file_with.py
- 
-# default: tanpa argumen mode, dibuka utk dibaca (read)
-with open('angka.txt') as f:
-    read_data = f.read()
-    print(read_data)
-    # error: io.UnsupportedOperation: not writable
-    #f.write('tambahan 1')
- 
-# dengan 'with',  tidak perlu di close
-print(f.closed)
- 
-# r+ => read write
-with open('angka.txt','r+') as f:
-    read_data = f.read()
-    print(read_data)
-    # bisa ditulisi karena r+
-    f.write('tambahan')
- 
-# r+ => read write
-# dibuka dengan w+ membuat isi hilang
-with open('angka.txt','w') as f:
-    f.write('tambahan')
- 
-with open('angka.txt') as f:
-    read_data = f.read()
-    print(f'sekarang hanya berisi 1 baris: {read_data}')
- 
-# sekarang diisi dengan loop angka
-with open('angka.txt', 'w') as f:
-    for a in range(1,11):
-        f.write(str(a) + '\n')
- 
-# tampilkan hasil pengisian
-with open('angka.txt') as f:
-    for line in f:
-        print(line, end='')
+include::../{sourcedir}/02-07/angka.txt.cad[]
+----
+
+Kode sumber Python untuk operasi file tersebut:
+
+[source,python]
+.src/02-07/open_file_with.py
+----
+include::../{sourcedir}/02-07/open_file_with.py[]
+----
+
+Hasil:
+
+[source,shell]
+----
+include::../{sourcedir}/02-07/open_file_with.txt[]
 ----

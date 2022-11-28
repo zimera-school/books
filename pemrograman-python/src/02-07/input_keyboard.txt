@@ -1,0 +1,6 @@
+$ python input_keyboard.py
+Masukkan nama = Zaky
+Umur = 20
+Nama = Zaky, usia = 20
+Nama = Zaky, usia =   20
+$
