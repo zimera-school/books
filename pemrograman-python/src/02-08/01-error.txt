@@ -1,0 +1,14 @@
+>>> f = open('abc.txt')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: 'abc.txt' # <1>
+>>> f = open('abca.txt','f')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid mode: 'f' # <2>
+>>> print 'abcdefg'
+  File "<stdin>", line 1
+    print 'abcdefg'
+                  ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print('abcdefg')? # <3>
+>>>

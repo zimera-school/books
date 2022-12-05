@@ -1,0 +1,7 @@
+$ python 02-except.py
+masukkan angka float: r
+harus memasukkan nilai float
+masukkan angka: g
+Error: <class 'ValueError'>
+Selesai
+$

@@ -1,0 +1,7 @@
+$ python 02-except.py
+masukkan angka float: 4.5
+masukkan angka: 6
+masukkan angka pembagi: 2
+Hasil bagi:  3.0
+Selesai
+$
