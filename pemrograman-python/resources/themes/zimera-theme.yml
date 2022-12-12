@@ -72,7 +72,8 @@ admonition:
 title-page:
   title:
     align: right
-    font-size: 14
+    font-size: 20
+    font-family: Noto Serif
     font-style: bold
     text-transform: smallcaps
     top: 80%

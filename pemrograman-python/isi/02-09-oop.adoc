@@ -1,49 +1,47 @@
-== OOP di Python
+== OOP (Object-Oriented Progamming / PBO - Pemrograman Berorientasi Obyek) di Python
 
-Python merupakan bahasa yang multiparadigm, artinya mendukung berbagai paradigma pemrograman. Dua paradigma yang akan dibahas khusus disini adalah OOP (Object-Oriented Programming) dan functional programming. 
+=== Pendahuluan
+
+Pemrogram menyelesaikan masalah dengan menggunakan cara pandang tertentu terhadap suatu masalah. Cara pandang tersebut dikenal dengan istilah *paradigma pemrograman*. Dalam kehidupan sehari-hari, perilaku seseorang dalam menyelesaikan suatu masalah sangat ditentukan oleh paradigma yang dipercaya oleh seseorang tersebut. Sebagai contoh, jika seseorang mempunyai paradigma penyelesaian masalah dengan komunikasi untuk mencapai solusi, maka komunikasi akan selalu dilakukan untuk mencapai solusi dalam suatu permasalah. Jika seseorang mempunyai paradigma kekerasan, maka kekerasan merupakan cara menyelesaikan setiap masalah yang muncul. Demikian seterusnya.
+
+Setiap bahasa pemrograman mempunyai minimal satu paradigma. Sampai saat ini kita selalu menggunakan paradigma pemrograman prosedural - artinya penyelesaian masalah dilakukan dengan membuat langkah-langkah penyelesaian masalah mulai dari awal sampai akhir. Langkah-langkah tersebut dikenal dengan istilah *algoritma*. Selain prosedural, ada banya lagi paradigma pemrograman. Beberapa diantaranya adalah:
+
+1.  Pemrograman Berorientasi Obyek
+2.  Pemrograman Fungsionanl
+3.  Pemrograman Logika
+4.  Pemrograman Konkuren
+5.  Pemrograman Berorientasi Array
+6.  Pemrograman Deklaratif
+7.  Pemrograman *event-driven*
+8.  dan lain-lain.
+
+Setiap paradigma diwujudkan dalam suatu konstruksi bahasa pemrograman tertentu. Misal, untuk pemrograman konkurensi, disediakan **async/await**. Python merupakan bahasa yang multiparadigm, artinya mendukung berbagai paradigma pemrograman. Dua paradigma yang akan dibahas khusus disini adalah OOP (Object-Oriented Programming / Pemrograman Berorientasi Obyek) dan functional programming. 
+
+=== Konsep 
+
+Secara konsepsual, PBO bisa diringkas dalam gambar seperti yang terdapat pada <<#gbr-obyek>>.
+
+[#gbr-obyek]
+.Konsep PBO
+image::02-09/obyek.png[]
 
 OOP merupakan paradigma pemrograman yang meniru cara pandang natural manusia dalam menyelesaikan masalah. Dalam dunia nyata, banyak terdapat obyek dan antar obyek tersebut bisa saling mengirim pesan. Dengan pesan tersebut, kolaborasi dilakukan sehingga masalah terselesaikan. Masing-masing obyek tersebut mempunyai perilaku dan karakteristik (misal dosen maupun mahasiswa mempunyai perilaku dan karakteristik masing-masing). Setiap obyek juga mempunyai kelas yang mendefinisikan perilaku dan karakteristik tersebut. Seringkali suatu kelas merupakan turunan dari kelas lain (misal dosen merupakan turunan dari manusia) dan seterusnya.
 
 Mengikuti pola natural seperti itu, OOP menghendaki adanya definisi kelas serta pembuatan instance / obyek  dari kelas tersebut. Jika belum ada yang mirip, maka bisa dibuat kelas dari awal, jika sudah ada yang mirip, maka tinggal dibuat turunannya. 
 
-[,python]
+=== Implementasi di Python
+
+Python menyediakan kata kunci **class** untuk mendefinisikan kelas. Setelah kelas dibuat, maka instance bisa dibuat (jika dikehendaki bisa lebih dari satu). 
+
+[source,python]
+.src/02-06/modul02.py
 ----
-# kelas.py
- 
-# definisi kelas paling sederhana
-# bisa ditambah properties
-class Dosen:
-    pass
- 
-bpdp = Dosen()
-bpdp.nama = 'Bambang Purnomosidi'
- 
-print(bpdp)
-print(bpdp.nama)
- 
-class DosenSTMIKAkakom(Dosen):
- 
-    institusi = 'STMIK AKAKOM'
- 
-    # konstruktor
-    def __init__(self, npp, nama):
-        self.npp = npp
-        self.nama = nama
- 
-    def mengajar(self, *args):
-        self.mk_diampu = args
- 
-bambangpdp = DosenSTMIKAkakom('123', 'bpdp')
-print(bambangpdp)
-bambangpdp.mengajar('Teknologi Cloud Computing', 'Big Data Analytics')
-print(bambangpdp.mk_diampu)
-print(bambangpdp.institusi)
- 
-class DosenSTMIKAkakomTI(DosenSTMIKAkakom):
- 
-    prodi = 'Teknik Informatika'
- 
-nia = DosenSTMIKAkakomTI('213','Nia R')
-print(nia.institusi)
-print(nia.prodi)
+include::../{sourcedir}/02-09/obyek.py[]
+----
+
+Hasilnya adalah sebagai berikut:
+
+[source,shell]
+----
+include::../{sourcedir}/02-09/obyek.txt[]
 ----

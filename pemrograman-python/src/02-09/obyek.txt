@@ -1,0 +1,9 @@
+$ python obyek.py
+<__main__.Dosen object at 0x7f30aac5bfd0>
+Bambang Purnomosidi
+<__main__.DosenUTDI object at 0x7f30aac5bb50>
+('Teknologi Cloud Computing', 'Big Data Analytics')
+Universitas Teknologi Digital Indonesia
+Universitas Teknologi Digital Indonesia
+Magister Teknologi Informasi
+$

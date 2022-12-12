@@ -94,7 +94,7 @@ VSCode tersedia untuk setidaknya 3 platform: Windows, Mac, dan Linux. Download V
 [#gbr-vscode-awal]
 .Tampilan awal dari Visual Studio Code
 [link=https://code.visualstudio.com]
-image::01-03/vscode-awal.png[]
+image::01-02/vscode-awal.png[]
 
 Pada posisi ini, semua platform mempunyai cara pengoperasian yang sama.
 
