@@ -12,7 +12,7 @@ v0.0.1-rev-{localdatetime}
 :sourcedir: src
 :includedir: isi
 :imagesdir: gambar
-:chapter-label: Bab
+:chapter-signifier: Bab
 :figure-caption: Gambar 
 :icons: font
 ////
@@ -24,9 +24,9 @@ Jika satu gambar penuh - cover
 [preface]
 = Pengantar
 
-image::logo-zimera.png[Zimera Systems, 150, 150]
+image::logo-zimera-corp.png[Zimera Corporation, 150, 150]
 
-Buku ini merupakan buku bebas tentang bahasa pemrograman Rust. Rust merupakan bahasa pemrograman yang pertama kali dibuat oleh Gordon Hoare di Mozilla Research dan bisa digunakan untuk berbagai domain permasalahan meskipun lebih banyak digunakan pada tatarn pemrograman sistem. Buku ini dibuat dengan sponsor dari Zimera Systems dan mempunyai lisensi *Creative Commons Attribution-ShareAlike 4.0 International*.
+Buku ini merupakan buku bebas tentang bahasa pemrograman Rust. Rust merupakan bahasa pemrograman yang pertama kali dibuat oleh Gordon Hoare di Mozilla Research dan bisa digunakan untuk berbagai domain permasalahan meskipun lebih banyak digunakan pada tataran pemrograman sistem. Buku ini dibuat dengan sponsor dari Zimera Corporation dan mempunyai lisensi *Creative Commons Attribution-ShareAlike 4.0 International*.
 
 image::cc-by-sa.png[CC-BY-SA 4.0 International]
 
@@ -42,22 +42,22 @@ Secara umum, penggunaan lisensi ini mempunyai implikasi bahwa pengguna materi:
 ### Atribusi
 
 *Dr. Bambang Purnomosidi D. P.* +
-*_Zimera Systems_* +
+*_Zimera Corporation_* (PT Zenit Merdeka Raya) +
+Nomor 55, RT 01, RW 03 +
 Dusun Medelan, Umbulmartani, Ngemplak +
 Sleman, DIY + 
 https://www.google.com/maps/place/Zimera+Systems/@-7.6975303,110.43921,17z/data=!3m1!4b1!4m5!3m4!1s0x2e7a5d7cc40e8871:0x2d44da15f0b3781e!8m2!3d-7.6975303!4d110.4413987 +
-E-mail: zimera-systems@gmail.com
+E-mail: zimera.corporation@gmail.com
 
 === Penghargaan
 
-Pembuatan buku ini merupakan hasil pekerjaan kolektif baik secara langsung maupun tidak langsung. Penulis serta kontributor mengucapkan terima kasih untuk Zimera Systems yang telah memberikan *sponsorship* selama penulisan buku ini.
+Pembuatan buku ini merupakan hasil pekerjaan kolektif baik secara langsung maupun tidak langsung. Penulis serta kontributor mengucapkan terima kasih untuk Zimera Corporation yang telah memberikan *sponsorship* selama penulisan buku ini.
 
 = Bagian I: Pengenalan dan Ekosistem
 
 [partintro]
 --
 Bagian ini menjelaskan tentang gambaran umum dari Rust serta persiapan untuk membangun aplikasi
-menggunakan Rust
 --
 
 include::{includedir}/01-01-mengenal-rust.adoc[]
@@ -74,9 +74,7 @@ include::{includedir}/01-05-struktur-proyek-rust.adoc[]
 
 [partintro]
 --
-Bagian ini menjelaskan tentang sintaksis dari bahasa pemrograman Rust. Beberapa bagian sudah
-membahas tentang pustaka standar sesuai pada materi pembahasan. Jika merupakan pustaka standar,
-bagian tersebut akan diberi catatan.
+Bagian ini menjelaskan tentang sintaksis dari bahasa pemrograman Rust. Beberapa bagian sudah  embahas tentang pustaka standar sesuai pada materi pembahasan. Jika merupakan pustaka standar, bagian tersebut akan diberi catatan.
 --
 
 include::{includedir}/02-01-variabel-komentar.adoc[]
@@ -103,11 +101,7 @@ include::{includedir}/02-10-mengelola-error.adoc[]
 
 [partintro]
 --
-Bagian ini menjelaskan berbagai pustaka standar dari Rust. Pustaka standar merupakan API yang
-menjadi bagian dari Rust dan bisa diakses setelah kita melakukan instalasi Rust tanpa perlu
-melakukan instalasi tambahan lain. Bagian ini tidak menjelaskan secara rinci semua pustaka standar,
-tetapi hanya beberapa saja. Setelah itu, pembaca bisa melihat pada dokumentasi lengkap dari pustaka
-standar dari Rust untuk mengetahui lebih lanjut.
+Bagian ini menjelaskan berbagai pustaka standar dari Rust. Pustaka standar merupakan API yang menjadi bagian dari Rust dan bisa diakses setelah kita melakukan instalasi Rust tanpa perlu melakukan instalasi tambahan lain. Bagian ini tidak menjelaskan secara rinci semua pustaka standar, tetapi hanya beberapa saja. Setelah itu, pembaca bisa melihat pada dokumentasi lengkap dari pustaka standar dari Rust untuk mengetahui lebih lanjut.
 --
 
 include::{includedir}/03-01-mengelola-string.adoc[]
